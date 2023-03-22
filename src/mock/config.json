@@ -1,0 +1,19 @@
+{
+    "apiUrl": "/sta/api/v1",
+    "publishedLangs": ["es", "gl", "en", "ca", "eu"],
+    "flags": {
+        "AuthMethodsSameSize": true
+    },
+    "theme": {
+        "palette": {
+            "primary": { "main": "#0f62fe" },
+            "secondary": { "main": "#ffb300" }
+        },
+        "branding": {
+            "logo": {
+                "wide": "public/assets/branding/neutral-logo.svg",
+                "square": "public/assets/branding/neutral-mark.svg"
+            }
+        }
+    }
+}
