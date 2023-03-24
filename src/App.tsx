@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import { theme } from './themes';
+import { router } from './routes';
+import { RouterProvider } from 'react-router-dom';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
-function App() {
-    return <div className="App">App</div>;
+export default function App() {
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <RouterProvider router={router} />
+        </ThemeProvider>
+    );
 }
-
-export default App;

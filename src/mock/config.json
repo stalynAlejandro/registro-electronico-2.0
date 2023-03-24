@@ -11,8 +11,8 @@
         },
         "branding": {
             "logo": {
-                "wide": "public/assets/branding/neutral-logo.svg",
-                "square": "public/assets/branding/neutral-mark.svg"
+                "wide": "assets/branding/neutral-logo.svg",
+                "square": "assets/branding/neutral-mark.svg"
             }
         }
     }
