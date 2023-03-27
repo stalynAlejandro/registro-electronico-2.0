@@ -250,3 +250,125 @@ If you prefer to design for a fixed set of sizes instead of trying to accomodate
     <Box sx={{bgcolor:'blue' height:'100vh'}}>
 </Container>
 ```
+
+## Grid
+
+Layout grid that adapts to screen size and orientation, ensuring consistency across layouts.
+
+The `grid` creates visual consistency between layouts while allowing flexibility acorss a wide variety of designs. MUI is based on a **12-column grid layout**.
+
+> The `Grid` component shuldn't be consused with a data grid; it is closer to a layout grid.
+
+### How it Works
+
+The grid system is implemented with the `Grid` component:
+
+-   It uses _Css's FlexibleBox module_ for high flexibility.
+
+-   There are two types of layout: _containers_ and _items_.
+
+-   Items widths are set in percentages, so they're always fluid and sized relative to their parent element.
+
+-   Items have padding to create the spacing between individuals items.
+
+-   There are five grid breakpoints: _xs_, _sm_, _md_, _lg_ and _xl_.
+
+-   Integer values can be given to each breakpoint, indicating how many of the 12 available columns are occupied by the component when the viewport width satisfies the _breakpoints constraints_.
+
+### Fuild grid
+
+Fluid grid use columns that scale and resize content. A fluid grid's layout can use breakpoints to determine if the layout needs to change dramatically.
+
+### Basic grid
+
+Column widths are interger values _between 1 and 12_; they apply at any breakpoint and indicate how many columns are occupied by the component.
+
+A value given to a breakpoint applies to all the other breakpoints wider than it (unless overriden, as you can read later in this page). `xs={12}` sizes a component to occupy the whole width regardless of its size.
+
+```js
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#000' : '#fff',
+}));
+
+export default function BasicGrid() {
+    return (
+        <Box sx={{ flexGrow: 1 }}>
+            <Grid container spacig={2}>
+                <Grid item xs={8}>
+                    <Item />
+                </Grid>
+                <Grid item xs={4}>
+                    <Item />
+                </Grid>
+            </Grid>
+        </Box>
+    );
+}
+```
+
+### Grid with multiple breakpoints
+
+Components may have multiple widths defined, causing the layout to change at the defined breakpoint. Width values given to larger breakpoints override those given to smaller breakpoints.
+
+For example, `xs={12} sm={16}` sizes a component to occupy half of the viewport width(6 columns) when viewport width is 600 or more pixels.
+
+For smaller viewports, the component fills all 12 available columns.
+
+```js
+<Grid container spacing={2}>
+    <Grid item xs={6} md={8}>
+        Item
+    </Grid>
+    <Grid item xs={6} md={4}>
+        Item
+    </Grid>
+    <Grid item xs={6} md={4}>
+        Item
+    </Grid>
+    <Grid item xs={6} md={8}>
+        Item
+    </Grid>
+</Grid>
+```
+
+### Row and column spacing
+
+The `rowSpacing` and `columnSpacing` props allow for specifying the row and column gaps independently. It's similar to the `row-gap` and `column-gap` properties of CSS grid.
+
+```js
+<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    <Grid item xs={6}>
+        1
+    </Grid>
+    <Grid item xs={6}>
+        2
+    </Grid>
+    <Grid item xs={6}>
+        3
+    </Grid>
+    <Grid item xs={6}>
+        4
+    </Grid>
+</Grid>
+```
+
+### CSS Grid Layout
+
+The `Grid` component is using CSS flexbox internally. But as seen below, you can easily use _the system_ and CSS grid to layout your pages.
+
+```js
+<Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
+    <Box gridColumn="span 8">Item</Box>
+    <Box gridColumn="span 4">Item</Box>
+    <Box gridColumn="span 4">Item</Box>
+    <Box gridColumn="span 8">Item</Box>
+</Box>
+```
+
+### System Props
+
+As a CSS utility component, the Grid supports all `system` properties. You can use them as props directly on the component. For instance, a padding:
+
+```js
+<Grid item p={2}>
+```
