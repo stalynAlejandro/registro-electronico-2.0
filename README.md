@@ -138,3 +138,115 @@ return (
     />
 );
 ```
+
+# Layout
+
+## Box
+
+Serves as a wrapper component for most of the CSS utility needs.
+
+The Box component packages _all the style functions_ that are exposed in `@mui/system`.
+
+The `sx` prop. All system properties are available via the `sx` prop. In addition, the `sx` prop allows you to specify any other CSS rules you may need. Here's an example of how you can use it:
+
+```js
+import * as React from 'react;
+import Box from '@mui/material/Box';
+
+export default function BoxSx(){
+    return(
+        <Box
+            sx={{
+                width:300,
+                height:300,
+                backgroundColor:'primary.dark',
+                '&:hover':{
+                    backgroundColor:'primary.main',
+                    opacity:[0.9, 0.8, 0.8]
+                }
+            }}
+         />
+    )
+}
+
+```
+
+### Overriding MUI components
+
+The Box component wraps your components. It creates a new DOM element, `<div>` that by default can be changed the `component` prop. Let's say you want to use a `<span>` instead:
+
+```js
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+
+export default function BoxComponent() {
+    return (
+        <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+            <Button>Save</Button>
+        </Box>
+    );
+}
+```
+
+This works great when the changes can be isolated to a new DOM element. For instance, you can change the margin this way.
+
+However, sometimes you have to target the underlying DOM element. As an example, you may want to change the border of the Button.
+
+The Button component defines its own styles. CSS inheritance doesn't help. To workaround the problem, you can use the `sx` prop directly on the child if it is a MUI component.
+
+```js
+<Button sx={{ border: '1px dashed grey' }}>Save</Button>
+```
+
+For non-MUI components, use the `component` prop.
+
+```js
+<Box component="button" sx={{ border: '1px dashed grey' }}>
+    Save
+</Box>
+```
+
+### System props
+
+As a CSS utility component, the `Box` also supports all `system` properties. You can use them as prop directly on the component. For instance, a margin-top.
+
+```js
+<Box mt={2}>
+```
+
+### Box API
+
+Props of the native component are:
+
+-   **component**. _elementType_. The component used for the root node. Either a string to use a HTML element or a component.
+
+-   **sx**. _Array<func | object | bool> | func | object_. The system prop that allows defining system overrides as well as additional CSS styles.
+
+As a CSS utiliy, the Box component also supports all `system` properties. You can use them as props directly on the component.
+
+The `ref` is forwarded to the root element.
+
+## Container
+
+Centers your content horizontally. It's the most basic layout element. While containers can be nested, most layouts do not require a nested container.
+
+### Fluid
+
+A fluid container width is bounded by the `maxWidth` prop value.
+
+```js
+<Container maxWidth="sm">
+    <Box sx={{bgcolor:'blue' height:'100vh'}}>
+</Container>
+```
+
+### Fixed
+
+If you prefer to design for a fixed set of sizes instead of trying to accomodate a fully fluid viewport, you can set the `fixed` prop. The `max-width` matches the `min-width` of the current breakpoint.
+
+```js
+<Container fixed>
+    <Box sx={{bgcolor:'blue' height:'100vh'}}>
+</Container>
+```
