@@ -1,10 +1,26 @@
-import { orange, red } from '@mui/material/colors';
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-export const theme = createTheme({
+const customTheme = createTheme({
     palette: {
-        primary: {
-            main: orange[500],
-        },
+        primary: { main: '#0f62fe' },
+        secondary: { main: '#ffb300' },
     },
 });
+
+export const defaultTheme = responsiveFontSizes(
+    createTheme(customTheme, {
+        palette: {
+            primary: { main: '#ff62fe' },
+            secondary: { main: '#fff300' },
+            info: {
+                main: customTheme.palette.secondary.main,
+            },
+        },
+        branding: {
+            logo: {
+                wide: '',
+                square: '',
+            },
+        },
+    })
+);

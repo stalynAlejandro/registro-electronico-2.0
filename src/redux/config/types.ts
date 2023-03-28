@@ -1,41 +1,12 @@
+import { defaultTheme } from '../../themes';
+
 export type languajges = 'es' | 'en' | 'ca' | 'gl';
 
-export interface Config {
+export interface ConfigProps {
     apiUrl: string;
     publishedLangs: languajges[];
     flags: {
         AuthMethodsSameSize: boolean;
     };
-    theme: {
-        palette: {
-            primary: { main: string };
-            secondary: { main: string };
-        };
-        branding: {
-            logo: {
-                wide: string;
-                square: string;
-            };
-        };
-    };
+    theme: typeof defaultTheme;
 }
-
-export const initialState: Config = {
-    apiUrl: '/sta/api/v1',
-    publishedLangs: ['es', 'gl', 'en', 'ca'],
-    flags: {
-        AuthMethodsSameSize: true,
-    },
-    theme: {
-        palette: {
-            primary: { main: '#0f62fe' },
-            secondary: { main: '#ffb300' },
-        },
-        branding: {
-            logo: {
-                wide: 'assets/branding/neutral-logo.svg',
-                square: 'assets/branding/neutral-mark.svg',
-            },
-        },
-    },
-};

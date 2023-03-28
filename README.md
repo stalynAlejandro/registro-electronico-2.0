@@ -139,6 +139,208 @@ return (
 );
 ```
 
+# Styled()
+
+Utility for creating styled components.
+
+All the MUI components are styled with this `styled()` utility. This utility is built on top of the `styled()` module of `@mui/styled-engine` and provides additional features.
+
+**Import path**. You can use the utility coming from the `@mui/system` package, or if you are using `@mui/material`, you can import it from `@mui/material/styles`. The difference is in the default `theme` that is used (if no theme is available in the React context).
+
+### styled -> API
+
+> styled(Component, [options])(styles) => Component
+
+**Arguments**.
+
+-   **Components**. The component that will be wrapped.
+
+**Options**.
+
+-   **shouldForwardProp**. _(prop:string) => bool[optional]_ . Indicates whether the `prop` should be forwarded to the **Component**.
+
+-   **label**. _string[optional]_. The suffix of the style sheet. Useful for debugging.
+
+-   **name**. _string[optional]_. The key used under `theme.components` for specifying `styleOverrides` and `variants`. Also used for generating the `label`.
+
+-   **slot**. _string[optional]_. If `Root`, it automatically applies the theme's `variants`.
+
+-   **overridesResolver**. _((props: object, styles: Record<string, styles>)) => styles[optional]_. Function that returns styles based on the props and the `theme.components[name].styleOverrides` object.
+
+-   **skipVariantsResolver**. _(bool)_. Disables the automatic resolver for the `theme.components[name].variants`.
+
+-   **skipSx**. _bool[optinal])_. Disables the `sx` prop on the component.
+
+### Basic usage -> styled()
+
+```js
+import * as React from 'react';
+import {styled} from '@mui/system';
+
+const MyComponent = styled('div')({
+    color:'gray',
+    backgroundColor:'aliceblue',
+    padding:8
+});
+
+export const BasicUsage(){
+    return <MyComponent>Styled div</MyComponent>
+}
+
+```
+
+#### Using the theme -> styled()
+
+```js
+import * as React from 'react';
+import { styled } from '@mui/system';
+
+const customTheme = createTheme({
+    palette: {
+        primary: {
+            main: 'red',
+            contrastText: 'white',
+        },
+    },
+});
+
+const MyThemeComponent = styled('div')(({ theme }) => ({
+    color: theme.palette.primery.contrastText,
+    backgroundColor: theme.palette.primary.main,
+    padding: theme.spacing(1),
+}));
+
+export function ThemeUsage() {
+    return (
+        <ThemeProvider theme={customTheme}>
+            <MyThemeProvider>Styled div with theme</MyThemeProvider>
+        </ThemeProvider>
+    );
+}
+```
+
+### Custom Components
+
+This example demostrates how you can use the `styled` API to create custom components, with the same capabilities as the core components.
+
+```js
+import * as React from 'react';
+import { styled, createTheme, ThemeProvider } from '@mui/system';
+
+interface MyThemeComponentProps {
+    color?: 'primary' | 'secondary';
+    variant?: 'normal' | 'dashed';
+}
+
+const customTheme = createTheme({
+    components: {
+        MyThemeComponent: {
+            styleOverrides: {
+                root: {
+                    color: 'darkslategray',
+                },
+                primary: {
+                    color: 'darkblue',
+                },
+                secondary: {
+                    color: 'darkred',
+                    backgroundColor: 'pink',
+                },
+            },
+            variants: [
+                {
+                    props: { variant: 'dashed', color: 'primary' },
+                    style: {
+                        border: '1px dashed darkblue',
+                    },
+                },
+                {
+                    props: { variant: 'dashed', color: 'secondary' },
+                    style: {
+                        border: '1px dashed darkred',
+                    },
+                },
+            ],
+        },
+    },
+});
+
+const MyThemeComponent = styled('div',{
+    shouldForwardProp: (prop) => prop !== 'color' && !== 'variant' && prop !== 'sx',    // Configure which props should be forwarded on DOM.
+    name: 'MyThemeComponent',
+    slot:'Root',
+    overridesResolver:(props, styles) => [                                              // We are specifying here how the styleOverrides are
+        styles.root,                                                                    // being applied based on props.
+        props.color === 'primary' && styles.primary,
+        props.color === 'secondary' && styles.secondary,
+    ],
+})<MyThemeComponentProps>(({theme}) => ({
+    backgroundColor:'aliceblue',
+    padding:theme.spacing(1)
+}));
+
+export function UsingOptions(){
+    return(
+        <ThemeProvider>
+            <MyThemeComponent sx={{m:1}} color="primary" variant="dashed">
+                Primary
+            </MyThemeComponent>
+            <MyThemeComponent sx={{m:1}} color="secondary">
+                Secondary
+            </MyThemeComponent>
+        </ThemeProvider>
+    )
+}
+
+```
+
+### Removing features -> styled()
+
+If you'd like to remove some of the MUI specific features, you can do it like this:
+
+```js
+const StyledComponent = styled(
+    'div',
+    {},
+    {
+        name: 'MuiStyled',
+        slot: 'Root',
+        // overridesResolver:(props, styles) => styles.root,    // disables theme.components[name].styleOverrides
+        skipVariantsResolver: true, // disables theme.components[name].variants
+        skipSx: true, // disables the sx prop
+    }
+);
+```
+
+### Create custom styled() utility
+
+If you want to have a different default theme for the `styled()` utility, you can create your own version of it, using the `createStyled()` utility.
+
+```js
+import { createStyled, createTheme } from '@mui/system';
+
+const defaultTheme = createTheme({
+    // your custom theme values
+});
+
+export const styled = createStyled({ defaultTheme });
+```
+
+### style definition varies slightly
+
+With `styled`:
+
+```js
+const MyStyledButton = styled('button')({
+    padding: 1, // means 1px
+});
+
+// Patterns for how to use props differ
+const MyStyledButton = styled('button')(props => ({
+    backgroundColor: props.myBackgroundColor,
+}));
+```
+
 # Layout
 
 ## Box
