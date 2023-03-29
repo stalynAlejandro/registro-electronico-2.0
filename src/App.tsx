@@ -1,5 +1,5 @@
-import { Home } from './pages/Home';
 import { router } from './routes';
+import { Loading } from './pages/Loading';
 import { useEffect } from 'react';
 import { setConfig } from './redux/config';
 import { mergeThemes } from './utils/mergeThemes';
@@ -20,7 +20,7 @@ export default function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            {config && !error ? <RouterProvider router={router} /> : <Home />}
+            {config ? <RouterProvider router={router} /> : <Loading />}
         </ThemeProvider>
     );
 }

@@ -1,7 +1,6 @@
-import { createTheme } from '@mui/material/styles';
 import { defaultTheme } from '../themes';
+import { createTheme } from '@mui/material/styles';
 
 export const mergeThemes = ({ newTheme }: { newTheme: typeof defaultTheme }) => {
-    const theme = createTheme(defaultTheme, newTheme);
-    return theme;
+    return createTheme(defaultTheme, newTheme);
 };

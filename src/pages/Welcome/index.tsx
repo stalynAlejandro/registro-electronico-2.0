@@ -7,10 +7,10 @@ const Div = styled('div')(({ theme }) => ({
     backgroundColor: theme.palette.secondary.main,
 }));
 
-export function Home() {
+export function Welcome() {
     const [first, setfirst] = useState<boolean>(false);
 
-    setTimeout(() => setfirst(true), 700);
+    setTimeout(() => setfirst(true), 500);
 
     return (
         <Fade in={first} timeout={1000}>
