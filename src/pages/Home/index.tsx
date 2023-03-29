@@ -11,7 +11,7 @@ const Div = styled('div')(({ theme }) => ({
 export function Home() {
     const config = useSelector((state: RootState) => state.config);
     return (
-        <Container fixed maxWidth="xl">
+        <Container fixed maxWidth={'lg'}>
             <Div />
         </Container>
     );

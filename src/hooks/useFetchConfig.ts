@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ConfigProps } from '../redux/config/types';
 
-export function useFetchConfig(): [ConfigProps | undefined, boolean, boolean] {
+export function useFetchConfig(): [any | undefined, boolean, boolean] {
     const [error, setError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [config, setConfig] = useState<ConfigProps | undefined>(undefined);
@@ -9,7 +9,7 @@ export function useFetchConfig(): [ConfigProps | undefined, boolean, boolean] {
     useEffect(() => {
         async function fetchConfig() {
             try {
-                const res = await fetch(`http://localhost:3001/config`)
+                const res = await fetch('http://localhost:3010/config.json')
                     .then(response => response.json())
                     .catch(e => {
                         throw e;

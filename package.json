@@ -7,7 +7,8 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "dev-https": "set HTTPS=true&&npm dev"
+        "dev-https": "set HTTPS=true&&npm dev",
+        "mock:api": "json-server --watch src/mock/db.cjs --port 3010 --routes src/mock/routes.json --middlewares src/mock/middleware.cjs --delay 500 --static src/mock/files"
     },
     "dependencies": {
         "@emotion/react": "^11.10.6",

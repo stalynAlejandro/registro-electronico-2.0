@@ -1,5 +1,3 @@
-import { defaultTheme } from '../../themes';
-
 export type languajges = 'es' | 'en' | 'ca' | 'gl';
 
 export interface ConfigProps {
@@ -8,5 +6,4 @@ export interface ConfigProps {
     flags: {
         AuthMethodsSameSize: boolean;
     };
-    theme: typeof defaultTheme;
 }

@@ -7,22 +7,6 @@ const initialState: ConfigProps = {
     flags: {
         AuthMethodsSameSize: false,
     },
-    theme: {
-        palette: {
-            primary: {
-                main: '',
-            },
-            secondary: {
-                main: '',
-            },
-        },
-        branding: {
-            logo: {
-                wide: '',
-                square: '',
-            },
-        },
-    },
 };
 
 const configSlice = createSlice({
@@ -30,7 +14,9 @@ const configSlice = createSlice({
     initialState,
     reducers: {
         setConfig(state, action: PayloadAction<ConfigProps>) {
-            state = action.payload;
+            state.flags = action.payload.flags;
+            state.apiUrl = action.payload.apiUrl;
+            state.publishedLangs = action.payload.publishedLangs;
         },
     },
 });
