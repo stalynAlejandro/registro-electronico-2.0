@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ConfigProps } from '../redux/config/types';
 
-export function useFetchConfig(): [any | undefined, boolean, boolean] {
+export function useFetchConfig(): any | undefined {
     const [error, setError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [config, setConfig] = useState<ConfigProps | undefined>(undefined);
@@ -29,5 +29,5 @@ export function useFetchConfig(): [any | undefined, boolean, boolean] {
         };
     }, []);
 
-    return [config, loading, error];
+    return config;
 }

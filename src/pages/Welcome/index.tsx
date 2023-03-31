@@ -1,22 +1,34 @@
-import { useState } from 'react';
-import { Container, Fade, styled } from '@mui/material';
+import { Button, Fade, Typography, styled } from '@mui/material';
 
-const Div = styled('div')(({ theme }) => ({
+const ButtonContainer = styled('div')(({ theme }) => ({
+    height: '4rem',
+    width: '20%',
+    display: 'flex',
+    justifyContent: 'space-between',
+}));
+
+const WelcomeContainer = styled('div')(({ theme }) => ({
+    margin: 0,
+    width: '100%',
     height: '100vh',
-    width: 'auto',
-    backgroundColor: theme.palette.secondary.main,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
 }));
 
 export function Welcome() {
-    const [first, setfirst] = useState<boolean>(false);
-
-    setTimeout(() => setfirst(true), 500);
-
     return (
-        <Fade in={first} timeout={1000}>
-            <Container fixed maxWidth={'lg'}>
-                <Div />
-            </Container>
+        <Fade in={true} timeout={2000}>
+            <WelcomeContainer>
+                <Typography variant={'h1'} children={'¡Hola Mundo!'} />
+                <Typography variant={'body1'} children={'Hello dev, find some demos here: '} />
+                <ButtonContainer>
+                    <Button variant="contained" children="All Options" />
+                    <Button variant="outlined" children="Triple" />
+                    <Button variant="text" children="Single" />
+                </ButtonContainer>
+            </WelcomeContainer>
         </Fade>
     );
 }
