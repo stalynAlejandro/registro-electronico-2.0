@@ -4,7 +4,7 @@ import { ConfigProps } from '../redux/config/types';
 export function useFetchConfig(): any | undefined {
     const [error, setError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
-    const [config, setConfig] = useState<ConfigProps | undefined>(undefined);
+    const [config, setConfig] = useState<ConfigProps | undefined | boolean>(undefined);
 
     useEffect(() => {
         async function fetchConfig() {
@@ -18,7 +18,7 @@ export function useFetchConfig(): any | undefined {
                 setLoading(false);
             } catch (e) {
                 setError(true);
-                setConfig(undefined);
+                setConfig(false);
             }
         }
         fetchConfig();

@@ -1,12 +1,14 @@
 import { router } from './routes';
+import { Error } from './pages/Error';
 import { Loading } from './pages/Loading';
 import { setConfig } from './redux/config';
 import { mergeThemes } from './utils/mergeThemes';
 import { useFetchConfig } from './hooks';
 import { useAppDispatch } from './redux';
 import { RouterProvider } from 'react-router-dom';
+import { Suspense, useEffect } from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { Suspense, createContext, useEffect, useMemo, useState } from 'react';
+import { Container } from '@mui/system';
 
 export default function App() {
     const dispatch = useAppDispatch();
@@ -21,7 +23,9 @@ export default function App() {
         <Suspense fallback={<Loading />}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                {config ? <RouterProvider router={router} /> : <Loading />}
+                <Container maxWidth="xl">
+                    {config === undefined ? <Loading /> : <RouterProvider router={router} />}
+                </Container>
             </ThemeProvider>
         </Suspense>
     );

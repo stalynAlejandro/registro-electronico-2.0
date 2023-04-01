@@ -1,9 +1,25 @@
 import { Button, Fade, Typography, styled } from '@mui/material';
+import { Box, css } from '@mui/system';
+
+const ButtonStyled = styled(Button)(
+    ({ theme }) => css`
+        height: 30;
+    `
+);
+
+const ButtonContainerLang = styled('div')(({ theme }) => ({
+    width: '30%',
+    height: '5rem',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+}));
 
 const ButtonContainer = styled('div')(({ theme }) => ({
-    height: '4rem',
-    width: '20%',
+    width: '40%',
+    height: '5rem',
     display: 'flex',
+    alignItems: 'center',
     justifyContent: 'space-between',
 }));
 
@@ -22,11 +38,19 @@ export function Welcome() {
         <Fade in={true} timeout={2000}>
             <WelcomeContainer>
                 <Typography variant={'h1'} children={'¡Hola Mundo!'} />
-                <Typography variant={'body1'} children={'Hello dev, find some demos here: '} />
+                <Typography variant={'h6'} children={'if your lang !== mylang'} />
+                <ButtonContainerLang>
+                    <ButtonStyled variant="contained" children="Español" />
+                    <ButtonStyled variant="contained" children="Catalá" />
+                    <ButtonStyled variant="outlined" children="Galego" />
+                    <ButtonStyled variant="text" children="Euskera" />
+                </ButtonContainerLang>
+                <Typography variant={'h5'} children={'Hello dev, find some demos here: '} />
                 <ButtonContainer>
-                    <Button variant="contained" children="All Options" />
-                    <Button variant="outlined" children="Triple" />
-                    <Button variant="text" children="Single" />
+                    <ButtonStyled variant="contained" children="All Options" />
+                    <ButtonStyled variant="contained" children="All Options" />
+                    <ButtonStyled variant="outlined" children="Triple" />
+                    <ButtonStyled variant="text" children="Single" />
                 </ButtonContainer>
             </WelcomeContainer>
         </Fade>
