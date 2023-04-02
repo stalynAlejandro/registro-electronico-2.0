@@ -7,7 +7,6 @@ import { useAppDispatch } from './redux';
 import { RouterProvider } from 'react-router-dom';
 import { Suspense, useEffect } from 'react';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { Container } from '@mui/system';
 
 export default function App() {
     const dispatch = useAppDispatch();
