@@ -1,16 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import { Fade, Typography } from '@mui/material';
 import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } from './styled';
 
 export function Welcome() {
+    const { t, i18n } = useTranslation();
+
     setTimeout(() => {
+        // i18n.changeLanguage('es');
         throw new Error();
-    }, 1000);
+    }, 4000);
 
     return (
         <Fade in={true} timeout={2000}>
             <WelcomeContainer>
-                <Typography variant={'h1'} children={'¡Hola Mundo!'} />
-                <Typography variant={'h6'} children={'if your lang !== mylang'} />
+                <Typography variant={'h1'} children={t('hello')} />
+                <Typography variant={'h6'} children={t('title')} />
                 <ButtonContainerLang>
                     <ButtonStyled variant="contained" children="Español" />
                     <ButtonStyled variant="contained" children="Catalá" />

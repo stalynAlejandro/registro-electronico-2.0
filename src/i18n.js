@@ -8,7 +8,9 @@ i18n.use(Backend)
     .use(initReactI18next)
     .init({
         debug: false,
-        fallbackLng: 'es',
+        defaultNS: 'common',
+        fallbackLng: ['es'],
+        ns: ['common'],
         interpolation: { escapeValue: false },
     });
 
