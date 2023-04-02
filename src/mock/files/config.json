@@ -5,15 +5,13 @@
         "AuthMethodsSameSize": true
     },
     "theme": {
-        "palette": {
-            "primary": { "main": "#0f62fe" },
-            "secondary": { "main": "#ffb300" }
+        "typography": {
+            "fontFamily": "Fira Code"
         },
-        "branding": {
-            "logo": {
-                "wide": "assets/branding/neutral-logo.svg",
-                "square": "assets/branding/neutral-mark.svg"
-            }
+        "palette": {
+            "mode": "dark",
+            "primary": { "main": "#f79300" },
+            "secondary": { "main": "#88f300" }
         }
     }
 }

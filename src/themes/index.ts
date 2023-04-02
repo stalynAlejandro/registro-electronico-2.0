@@ -1,29 +1,53 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-const customTheme = createTheme({
-    typography: {
-        fontFamily: ['Fira Code', 'Roboto'].join(','),
-    },
-    palette: {
-        primary: { main: '#0f62fe' },
-        secondary: { main: '#ffb300' },
-    },
-});
-
-export const defaultTheme = responsiveFontSizes(
-    createTheme(customTheme, {
+export const darkTheme = responsiveFontSizes(
+    createTheme({
+        typography: {
+            fontFamily: ['Fira Code', 'Roboto'].join(','),
+        },
         palette: {
+            mode: 'dark',
             primary: { main: '#ff62fe' },
             secondary: { main: '#fff300' },
-            info: {
-                main: customTheme.palette.secondary.main,
-            },
         },
-        branding: {
-            logo: {
-                wide: '',
-                square: '',
-            },
+    })
+);
+
+export const lightTheme = responsiveFontSizes(
+    createTheme({
+        typography: {
+            fontFamily: ['Fira Code', 'Roboto'].join(','),
+        },
+        palette: {
+            mode: 'light',
+            primary: { main: '#ff62fe' },
+            secondary: { main: '#fff300' },
+        },
+    })
+);
+
+export const dimedTheme = responsiveFontSizes(
+    createTheme({
+        typography: {
+            fontFamily: ['Fira Code', 'Roboto'].join(','),
+        },
+        palette: {
+            mode: 'light',
+            primary: { main: '#41f2f3' },
+            secondary: { main: '#4ff300' },
+        },
+    })
+);
+
+export const darkDimedTheme = responsiveFontSizes(
+    createTheme({
+        typography: {
+            fontFamily: ['Fira Code', 'Roboto'].join(','),
+        },
+        palette: {
+            mode: 'dark',
+            primary: { main: '#41f2f3' },
+            secondary: { main: '#4ff300' },
         },
     })
 );

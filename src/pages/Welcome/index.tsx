@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../../themes/ThemeProvider';
 import { useTranslation } from 'react-i18next';
-import { Fade, Typography } from '@mui/material';
+import { Fade, Typography, useTheme } from '@mui/material';
 import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } from './styled';
 
 export function Welcome() {
     const { t, i18n } = useTranslation();
+    const theme = useTheme();
+    const setThemeName = useContext(ThemeContext);
 
     return (
         <Fade in={true} timeout={2000}>
@@ -29,10 +33,26 @@ export function Welcome() {
                 </ButtonContainerLang>
                 <Typography variant={'h5'} children={t('findThemesHere')} />
                 <ButtonContainer>
-                    <ButtonStyled variant="contained" children={t('theme.light')} />
-                    <ButtonStyled variant="contained" children={t('theme.dark')} />
-                    <ButtonStyled variant="contained" children={t('theme.config')} />
-                    <ButtonStyled variant="contained" children={t('theme.default')} />
+                    <ButtonStyled
+                        onClick={() => setThemeName('lightTheme')}
+                        variant="contained"
+                        children={t('theme.light')}
+                    />
+                    <ButtonStyled
+                        onClick={() => setThemeName('darkTheme')}
+                        variant="contained"
+                        children={t('theme.dark')}
+                    />
+                    <ButtonStyled
+                        onClick={() => setThemeName('dimedTheme')}
+                        variant="contained"
+                        children={t('theme.config')}
+                    />
+                    <ButtonStyled
+                        onClick={() => setThemeName('darkDimedTheme')}
+                        variant="contained"
+                        children={t('theme.default')}
+                    />
                 </ButtonContainer>
             </WelcomeContainer>
         </Fade>

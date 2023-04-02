@@ -6,8 +6,8 @@
     },
     "theme": {
         "palette": {
-            "primary": { "main": "#0f62fe" },
-            "secondary": { "main": "#ffb300" }
+            "primary": { "main": "#ff62fe" },
+            "secondary": { "main": "#fff300" }
         },
         "branding": {
             "logo": {
