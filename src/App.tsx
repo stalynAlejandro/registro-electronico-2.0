@@ -1,5 +1,4 @@
 import { router } from './routes';
-import { Error } from './pages/Error';
 import { Loading } from './pages/Loading';
 import { setConfig } from './redux/config';
 import { mergeThemes } from './utils/mergeThemes';
@@ -23,9 +22,7 @@ export default function App() {
         <Suspense fallback={<Loading />}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <Container maxWidth="xl">
-                    {config === undefined ? <Loading /> : <RouterProvider router={router} />}
-                </Container>
+                <RouterProvider fallbackElement={<Loading />} router={router} />
             </ThemeProvider>
         </Suspense>
     );
