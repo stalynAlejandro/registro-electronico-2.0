@@ -5,28 +5,34 @@ import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } 
 export function Welcome() {
     const { t, i18n } = useTranslation();
 
-    setTimeout(() => {
-        // i18n.changeLanguage('es');
-        throw new Error();
-    }, 4000);
-
     return (
         <Fade in={true} timeout={2000}>
             <WelcomeContainer>
                 <Typography variant={'h1'} children={t('hello')} />
                 <Typography variant={'h6'} children={t('title')} />
                 <ButtonContainerLang>
-                    <ButtonStyled variant="contained" children="Español" />
-                    <ButtonStyled variant="contained" children="Catalá" />
-                    <ButtonStyled variant="outlined" children="Galego" />
-                    <ButtonStyled variant="text" children="Euskera" />
+                    <ButtonStyled
+                        onClick={() => i18n.changeLanguage('en')}
+                        variant={i18n.language === 'en' ? 'contained' : 'outlined'}
+                        children="English"
+                    />
+                    <ButtonStyled
+                        onClick={() => i18n.changeLanguage('es')}
+                        variant={i18n.language === 'es' ? 'contained' : 'outlined'}
+                        children="Español"
+                    />
+                    <ButtonStyled
+                        onClick={() => i18n.changeLanguage('ca')}
+                        variant={i18n.language === 'ca' ? 'contained' : 'outlined'}
+                        children="Catalá"
+                    />
                 </ButtonContainerLang>
-                <Typography variant={'h5'} children={'Hello dev, find some demos here: '} />
+                <Typography variant={'h5'} children={t('findThemesHere')} />
                 <ButtonContainer>
-                    <ButtonStyled variant="contained" children="All Options" />
-                    <ButtonStyled variant="contained" children="All Options" />
-                    <ButtonStyled variant="outlined" children="Triple" />
-                    <ButtonStyled variant="text" children="Single" />
+                    <ButtonStyled variant="contained" children={t('theme.light')} />
+                    <ButtonStyled variant="contained" children={t('theme.dark')} />
+                    <ButtonStyled variant="contained" children={t('theme.config')} />
+                    <ButtonStyled variant="contained" children={t('theme.default')} />
                 </ButtonContainer>
             </WelcomeContainer>
         </Fade>

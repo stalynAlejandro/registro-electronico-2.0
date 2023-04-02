@@ -1,12 +1,12 @@
 {
-    "hello": "¡Hola Mundo!",
-    "title": "Bienvenido a react con react-i18next",
-    "findThemesHere": "Hola dev, encuentra algunos temas aquí: ",
+    "hello": "¡Benvingut!",
+    "title": "Benvingut a react amb react-i18next",
+    "findThemesHere": "Hola dev, troba alguns temes aquí: ",
     "theme": {
-        "dark": "Tema Oscuro",
-        "light": "Tema Claro",
+        "dark": "Tema Oscur",
+        "light": "Tema Clar",
         "config": "Tema Config",
-        "default": "Tema Defecto"
+        "default": "Tema Defect"
     },
     "description": {
         "part1": "To get started, edit <1>src/App.js</1> and save to reload.",

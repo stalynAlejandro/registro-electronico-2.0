@@ -9,7 +9,7 @@ i18n.use(Backend)
     .init({
         debug: false,
         defaultNS: 'common',
-        fallbackLng: ['es'],
+        fallbackLng: 'es',
         ns: ['common'],
         interpolation: { escapeValue: false },
     });
