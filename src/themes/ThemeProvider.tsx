@@ -6,7 +6,7 @@ const getThemeByName = (theme: string) => {
     return themeMap[theme];
 };
 
-const themeMap: { [key: string]: any } = {
+export const themeMap: { [key: string]: any } = {
     lightTheme,
     darkTheme,
     dimedTheme,
@@ -19,13 +19,13 @@ export const MuiThemeProvider = (props: {
     configTheme: any;
     children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
 }) => {
-    const [themeName, _setThemeName] = useState('lightTheme');
+    const [themeName, setThemeName] = useState('lightTheme');
     const theme = props?.configTheme
         ? createTheme(props?.configTheme)
         : responsiveFontSizes(createTheme(getThemeByName(themeName)));
 
     return (
-        <ThemeContext.Provider value={_setThemeName}>
+        <ThemeContext.Provider value={{ themeName, setThemeName }}>
             <ThemeProvider theme={theme}>{props?.children}</ThemeProvider>
         </ThemeContext.Provider>
     );

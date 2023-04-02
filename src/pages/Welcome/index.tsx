@@ -1,13 +1,12 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../themes/ThemeProvider';
 import { useTranslation } from 'react-i18next';
-import { Fade, Typography, useTheme } from '@mui/material';
+import { ThemeContext } from '../../themes/ThemeProvider';
+import { Fade, Typography } from '@mui/material';
 import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } from './styled';
 
 export function Welcome() {
     const { t, i18n } = useTranslation();
-    const theme = useTheme();
-    const setThemeName = useContext(ThemeContext);
+    const { themeName, setThemeName } = useContext(ThemeContext);
 
     return (
         <Fade in={true} timeout={2000}>
@@ -35,22 +34,22 @@ export function Welcome() {
                 <ButtonContainer>
                     <ButtonStyled
                         onClick={() => setThemeName('lightTheme')}
-                        variant="contained"
+                        variant={themeName === 'lightTheme' ? 'contained' : 'outlined'}
                         children={t('theme.light')}
                     />
                     <ButtonStyled
                         onClick={() => setThemeName('darkTheme')}
-                        variant="contained"
+                        variant={themeName === 'darkTheme' ? 'contained' : 'outlined'}
                         children={t('theme.dark')}
                     />
                     <ButtonStyled
                         onClick={() => setThemeName('dimedTheme')}
-                        variant="contained"
+                        variant={themeName === 'dimedTheme' ? 'contained' : 'outlined'}
                         children={t('theme.config')}
                     />
                     <ButtonStyled
                         onClick={() => setThemeName('darkDimedTheme')}
-                        variant="contained"
+                        variant={themeName === 'darkDimedTheme' ? 'contained' : 'outlined'}
                         children={t('theme.default')}
                     />
                 </ButtonContainer>
