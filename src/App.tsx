@@ -1,12 +1,12 @@
 import { router } from './routes';
 import { Loading } from './pages/Loading';
 import { setConfig } from './redux/config';
+import { CssBaseline } from '@mui/material';
 import { useFetchConfig } from './hooks';
 import { useAppDispatch } from './redux';
 import { RouterProvider } from 'react-router-dom';
-import { Suspense, createContext, useEffect, useMemo, useState } from 'react';
-import { CssBaseline } from '@mui/material';
 import { MuiThemeProvider } from './themes/ThemeProvider';
+import { Suspense, createContext, useEffect } from 'react';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 

@@ -3,14 +3,7 @@ import { Button, styled } from '@mui/material';
 export const ButtonStyled = styled(Button)(({ theme }) => ({
     width: '9rem',
     height: '2.2rem',
-}));
-
-export const ButtonContainerLang = styled('div')(({ theme }) => ({
-    width: '35rem',
-    height: '5rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    [theme.breakpoints.down('sm')]: {},
 }));
 
 export const ButtonContainer = styled('div')(({ theme }) => ({
@@ -19,6 +12,11 @@ export const ButtonContainer = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    [theme.breakpoints.down('sm')]: {
+        height: '12rem',
+        flexDirection: 'column',
+        marginBottom: 30,
+    },
 }));
 
 export const WelcomeContainer = styled('div')(({ theme }) => ({
@@ -29,4 +27,7 @@ export const WelcomeContainer = styled('div')(({ theme }) => ({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+        justifyContent: 'space-around',
+    },
 }));

@@ -2,6 +2,7 @@
     "hello": "¡Benvingut!",
     "title": "Benvingut a react amb react-i18next",
     "findThemesHere": "Hola dev, troba alguns temes aquí: ",
+    "findDemosHere": "Troba alguns demos aquí: ",
     "theme": {
         "dark": "Tema Oscur",
         "light": "Tema Clar",
