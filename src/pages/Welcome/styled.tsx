@@ -14,8 +14,8 @@ export const ButtonContainer = styled('div')(({ theme }) => ({
     justifyContent: 'space-between',
     [theme.breakpoints.down('sm')]: {
         height: '12rem',
-        flexDirection: 'column',
         marginBottom: 30,
+        flexDirection: 'column',
     },
 }));
 
