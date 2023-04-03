@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { ThemeContext } from '../../themes/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 import { Fade, Typography } from '@mui/material';
-import { ButtonContainer, ButtonStyled, WelcomeContainer } from './styled';
+import { ThemeContext } from '../../themes/ThemeProvider';
+import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } from './styled';
 
 export function Welcome() {
     const { t, i18n } = useTranslation();
@@ -18,7 +18,7 @@ export function Welcome() {
             <WelcomeContainer>
                 <Typography variant={'h1'} children={t('hello')} />
                 <Typography variant={'h6'} children={t('title')} />
-                <ButtonContainer>
+                <ButtonContainerLang>
                     <ButtonStyled
                         onClick={() => i18n.changeLanguage('en')}
                         variant={languageIsSelected('en')}
@@ -34,7 +34,7 @@ export function Welcome() {
                         variant={languageIsSelected('ca')}
                         children="Catalá"
                     />
-                </ButtonContainer>
+                </ButtonContainerLang>
 
                 <Typography variant={'h5'} children={t('findThemesHere')} />
                 <ButtonContainer>

@@ -19,6 +19,10 @@ export const ButtonContainer = styled('div')(({ theme }) => ({
     },
 }));
 
+export const ButtonContainerLang = styled(ButtonContainer)(({ theme }) => ({
+    width: '30rem',
+}));
+
 export const WelcomeContainer = styled('div')(({ theme }) => ({
     margin: 0,
     width: 'auto',
