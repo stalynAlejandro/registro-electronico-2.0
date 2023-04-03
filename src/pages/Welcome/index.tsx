@@ -1,7 +1,7 @@
 import { useContext } from 'react';
+import { ThemeContext } from '../../themes/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 import { Fade, Typography } from '@mui/material';
-import { ThemeContext } from '../../themes/ThemeProvider';
 import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } from './styled';
 
 export function Welcome() {
