@@ -1,22 +1,22 @@
-import { useState } from 'react';
-import { Container, Fade, styled } from '@mui/material';
+import { useLocation } from 'react-router-dom';
+import { Fade, Typography, styled } from '@mui/material';
 
 const Div = styled('div')(({ theme }) => ({
     height: '100vh',
-    width: 'auto',
-    backgroundColor: theme.palette.secondary.main,
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
 }));
 
 export function Auth() {
-    const [first, setfirst] = useState<boolean>(false);
-
-    setTimeout(() => setfirst(true), 500);
+    const location = useLocation();
 
     return (
-        <Fade in={first} timeout={1000}>
-            <Container fixed maxWidth={'lg'}>
-                <Div />
-            </Container>
+        <Fade in={true} timeout={1000}>
+            <Div>
+                <Typography variant={'h1'} children={location.state} />
+            </Div>
         </Fade>
     );
 }

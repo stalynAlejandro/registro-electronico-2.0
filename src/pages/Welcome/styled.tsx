@@ -1,5 +1,63 @@
 import { Button, styled } from '@mui/material';
 
+export type ButtonProps = {
+    name: string;
+    label: string;
+};
+
+export const ButtonsLangProps: ButtonProps[] = [
+    {
+        name: 'en',
+        label: 'English',
+    },
+    {
+        name: 'es',
+        label: 'Español',
+    },
+    {
+        name: 'ca',
+        label: 'Catalá',
+    },
+];
+
+export const ButtonsThemesProps: ButtonProps[] = [
+    {
+        name: 'lightTheme',
+        label: 'theme.light',
+    },
+    {
+        name: 'darkTheme',
+        label: 'theme.dark',
+    },
+    {
+        name: 'dimedTheme',
+        label: 'theme.config',
+    },
+    {
+        name: 'darkDimedTheme',
+        label: 'theme.default',
+    },
+];
+
+export const ButtonsOptionsProps: ButtonProps[] = [
+    {
+        name: 'all',
+        label: 'All Options',
+    },
+    {
+        name: 'triple',
+        label: 'Triple',
+    },
+    {
+        name: 'single',
+        label: 'Single',
+    },
+    {
+        name: 'noauth',
+        label: 'No Auth',
+    },
+];
+
 export const ButtonStyled = styled(Button)(({ theme }) => ({
     width: '9rem',
     height: '2.2rem',

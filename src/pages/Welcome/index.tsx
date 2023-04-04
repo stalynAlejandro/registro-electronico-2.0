@@ -1,71 +1,63 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../../themes/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 import { Fade, Typography } from '@mui/material';
-import { ButtonContainer, ButtonContainerLang, ButtonStyled, WelcomeContainer } from './styled';
+import {
+    ButtonProps,
+    ButtonsThemesProps,
+    ButtonsOptionsProps,
+    ButtonContainer,
+    ButtonContainerLang,
+    ButtonStyled,
+    WelcomeContainer,
+    ButtonsLangProps,
+} from './styled';
 
 export function Welcome() {
+    let navigate = useNavigate();
     const { t, i18n } = useTranslation();
     const { themeName, setThemeName } = useContext(ThemeContext);
 
-    const languageIsSelected = (lang: string) =>
-        lang === i18n.language ? 'contained' : 'outlined';
-
-    const themeIsSelected = (theme: string) => (theme === themeName ? 'contained' : 'outlined');
+    const themeIsSelected = (th: string) => (th === themeName ? 'contained' : 'outlined');
+    const languageIsSelected = (lg: string) => (lg === i18n.language ? 'contained' : 'outlined');
+    const handleClickNavigateToAuth = (op: string) => navigate('/auth', { state: op });
 
     return (
-        <Fade in={true} timeout={2000}>
+        <Fade in={true} timeout={1000}>
             <WelcomeContainer>
                 <Typography variant={'h1'} children={t('hello')} />
                 <Typography variant={'h6'} children={t('title')} />
                 <ButtonContainerLang>
-                    <ButtonStyled
-                        onClick={() => i18n.changeLanguage('en')}
-                        variant={languageIsSelected('en')}
-                        children="English"
-                    />
-                    <ButtonStyled
-                        onClick={() => i18n.changeLanguage('es')}
-                        variant={languageIsSelected('es')}
-                        children="Español"
-                    />
-                    <ButtonStyled
-                        onClick={() => i18n.changeLanguage('ca')}
-                        variant={languageIsSelected('ca')}
-                        children="Catalá"
-                    />
+                    {ButtonsLangProps.map((lg: ButtonProps) => (
+                        <ButtonStyled
+                            children={lg.label}
+                            variant={languageIsSelected(lg.name)}
+                            onClick={() => i18n.changeLanguage(lg.name)}
+                        />
+                    ))}
                 </ButtonContainerLang>
 
                 <Typography variant={'h5'} children={t('findThemesHere')} />
                 <ButtonContainer>
-                    <ButtonStyled
-                        onClick={() => setThemeName('lightTheme')}
-                        variant={themeIsSelected('lightTheme')}
-                        children={t('theme.light')}
-                    />
-                    <ButtonStyled
-                        onClick={() => setThemeName('darkTheme')}
-                        variant={themeIsSelected('darkTheme')}
-                        children={t('theme.dark')}
-                    />
-                    <ButtonStyled
-                        onClick={() => setThemeName('dimedTheme')}
-                        variant={themeIsSelected('dimedTheme')}
-                        children={t('theme.config')}
-                    />
-                    <ButtonStyled
-                        onClick={() => setThemeName('darkDimedTheme')}
-                        variant={themeIsSelected('darkDimedTheme')}
-                        children={t('theme.default')}
-                    />
+                    {ButtonsThemesProps.map((th: ButtonProps) => (
+                        <ButtonStyled
+                            onClick={() => setThemeName(th.name)}
+                            variant={themeIsSelected(th.name)}
+                            children={t(th.label)}
+                        />
+                    ))}
                 </ButtonContainer>
 
                 <Typography variant={'h5'} children={t('findDemosHere')} />
                 <ButtonContainer>
-                    <ButtonStyled variant={'contained'} children={'All Options'} />
-                    <ButtonStyled variant={'contained'} children={'Triple'} />
-                    <ButtonStyled variant={'contained'} children={'Single'} />
-                    <ButtonStyled variant={'contained'} children={'No Auth'} />
+                    {ButtonsOptionsProps.map((op: ButtonProps) => (
+                        <ButtonStyled
+                            children={op.label}
+                            variant={'contained'}
+                            onClick={() => handleClickNavigateToAuth(op.name)}
+                        />
+                    ))}
                 </ButtonContainer>
             </WelcomeContainer>
         </Fade>
