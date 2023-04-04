@@ -1,22 +1,17 @@
 import { useLocation } from 'react-router-dom';
-import { Fade, Typography, styled } from '@mui/material';
-
-const Div = styled('div')(({ theme }) => ({
-    height: '100vh',
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
+import { AuthContainer } from './styled';
+import { useTranslation } from 'react-i18next';
+import { Fade, Typography } from '@mui/material';
 
 export function Auth() {
     const location = useLocation();
+    const { t } = useTranslation('auth');
 
     return (
         <Fade in={true} timeout={1000}>
-            <Div>
-                <Typography variant={'h1'} children={location.state} />
-            </Div>
+            <AuthContainer maxWidth="xl">
+                <Typography variant={'h1'} children={t('verifyIdentity')} />
+            </AuthContainer>
         </Fade>
     );
 }
