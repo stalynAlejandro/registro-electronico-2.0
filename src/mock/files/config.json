@@ -10,8 +10,8 @@
         },
         "palette": {
             "mode": "dark",
-            "primary": { "main": "#f79300" },
-            "secondary": { "main": "#88f300" }
+            "primary": { "main": "#ff9000" },
+            "secondary": { "main": "#ff0000" }
         }
     }
 }

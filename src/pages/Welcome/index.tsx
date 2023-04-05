@@ -29,8 +29,9 @@ export function Welcome() {
                 <Typography variant={'h1'} children={t('hello')} />
                 <Typography variant={'h6'} children={t('title')} />
                 <ButtonContainerLang>
-                    {ButtonsLangProps.map((lg: ButtonProps) => (
+                    {ButtonsLangProps.map((lg: ButtonProps, index: number) => (
                         <ButtonStyled
+                            key={index}
                             children={lg.label}
                             variant={languageIsSelected(lg.name)}
                             onClick={() => i18n.changeLanguage(lg.name)}
@@ -40,8 +41,9 @@ export function Welcome() {
 
                 <Typography variant={'h5'} children={t('findThemesHere')} />
                 <ButtonContainer>
-                    {ButtonsThemesProps.map((th: ButtonProps) => (
+                    {ButtonsThemesProps.map((th: ButtonProps, index: number) => (
                         <ButtonStyled
+                            key={index}
                             onClick={() => setThemeName(th.name)}
                             variant={themeIsSelected(th.name)}
                             children={t(th.label)}
@@ -51,8 +53,9 @@ export function Welcome() {
 
                 <Typography variant={'h5'} children={t('findDemosHere')} />
                 <ButtonContainer>
-                    {ButtonsOptionsProps.map((op: ButtonProps) => (
+                    {ButtonsOptionsProps.map((op: ButtonProps, index: number) => (
                         <ButtonStyled
+                            key={index}
                             children={op.label}
                             variant={'contained'}
                             onClick={() => handleClickNavigateToAuth(op.name)}

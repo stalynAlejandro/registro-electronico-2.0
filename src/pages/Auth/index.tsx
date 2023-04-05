@@ -5,7 +5,7 @@ import { Fade, Typography } from '@mui/material';
 
 export function Auth() {
     const location = useLocation();
-    const { t } = useTranslation('auth');
+    const { t } = useTranslation();
 
     return (
         <Fade in={true} timeout={1000}>
