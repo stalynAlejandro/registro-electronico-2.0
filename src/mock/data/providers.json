@@ -1,0 +1,58 @@
+[
+    {
+        "allowed": ["clave", "valid", "giltza", "digital-certificate", "unverified"],
+        "id": "dev",
+        "title": "Opina y participa en el portal de transparencia",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 1
+    },
+    {
+        "allowed": ["clave", "digital-certificate", "unverified"],
+        "id": "triple",
+        "title": "Opina y participa en el portal de transparencia",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 1
+    },
+    {
+        "allowed": ["clave"],
+        "id": "single",
+        "title": "Trámite que sólo acepta una plataforma",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 3
+    },
+    {
+        "allowed": ["clave", "valid", "giltza"],
+        "id": "multiple",
+        "title": "Trámite que acepta múltiples plataformas",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 3
+    },
+    {
+        "allowed": ["clave", "digital-certificate"],
+        "id": "typical",
+        "title": "Trámite que acepta una plataforma y certificado",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 3
+    },
+    {
+        "allowed": ["clave", "valid", "giltza", "digital-certificate"],
+        "id": "multiple-platforms-and-internal",
+        "title": "Trámite que acepta una plataforma y certificado",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 3
+    },
+    {
+        "allowed": ["digital-certificate", "unverified"],
+        "id": "only-internal",
+        "title": "Trámite que acepta sólo métodos internos",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 3
+    },
+    {
+        "allowed": ["unverified"],
+        "id": "unverified",
+        "title": "Trámite sin autenticar",
+        "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
+        "loa": 3
+    }
+]

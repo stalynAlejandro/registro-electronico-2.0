@@ -3,6 +3,7 @@
     "title": "Welcome to react with react-i18next",
     "findThemesHere": "Hello dev, find some themes here: ",
     "findDemosHere": "Find some demos here: ",
+    "verifyIdentity": "Verify your identity",
     "theme": {
         "dark": "Dark Theme",
         "light": "Light Theme",

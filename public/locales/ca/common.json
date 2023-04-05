@@ -3,6 +3,7 @@
     "title": "Benvingut a react amb react-i18next",
     "findThemesHere": "Hola dev, troba alguns temes aquí: ",
     "findDemosHere": "Troba alguns demos aquí: ",
+    "verifyIdentity": "Verifiqueu la vostra identitat",
     "theme": {
         "dark": "Tema Oscur",
         "light": "Tema Clar",

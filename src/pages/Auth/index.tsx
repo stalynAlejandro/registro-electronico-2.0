@@ -2,15 +2,19 @@ import { useLocation } from 'react-router-dom';
 import { AuthContainer } from './styled';
 import { useTranslation } from 'react-i18next';
 import { Fade, Typography } from '@mui/material';
+import { useFetchProviders } from '../../hooks/useFetchProviders';
 
 export function Auth() {
-    const location = useLocation();
+    const { state = '' } = useLocation();
     const { t } = useTranslation();
+
+    const [providers, loading, error] = useFetchProviders('dev');
 
     return (
         <Fade in={true} timeout={1000}>
             <AuthContainer maxWidth="xl">
                 <Typography variant={'h1'} children={t('verifyIdentity')} />
+                <Typography variant={'h1'} children={state} />
             </AuthContainer>
         </Fade>
     );

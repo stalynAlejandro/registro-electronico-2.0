@@ -86,10 +86,8 @@ export const WelcomeContainer = styled('div')(({ theme }) => ({
     width: 'auto',
     height: '100vh',
     display: 'flex',
+    textAlign: 'center',
     alignItems: 'center',
-    justifyContent: 'center',
     flexDirection: 'column',
-    [theme.breakpoints.down('sm')]: {
-        justifyContent: 'space-around',
-    },
+    justifyContent: 'center',
 }));

@@ -1,35 +1,38 @@
-import { ConfigProps } from '../redux/config/types';
 import { useState, useEffect } from 'react';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-export function useFetchConfig(): any | undefined {
+export function useFetchProviders(id: string): any | undefined {
     const [error, setError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
-    const [config, setConfig] = useState<ConfigProps | undefined | boolean>(undefined);
+    const [providers, setProviders] = useState<any | undefined>(undefined);
 
     useEffect(() => {
-        async function fetchConfig() {
+        async function fetchProviders() {
+            console.log('fetchProviders');
             try {
-                const res = await fetch(`${API_URL}/config`)
+                const res = await fetch(`${API_URL}/requests/${id}/providers`)
                     .then(response => response.json())
                     .catch(e => {
+                        console.log('error', e);
                         throw e;
                     });
-                setConfig(res);
                 setLoading(false);
+                setProviders(res);
+
+                console.log({ res });
             } catch (e) {
                 setError(true);
-                setConfig(false);
+                setProviders(undefined);
             }
         }
-        fetchConfig();
+        fetchProviders();
         return () => {
             setError(false);
             setLoading(false);
-            setConfig(undefined);
+            setProviders(undefined);
         };
     }, []);
 
-    return config;
+    return [providers, loading, error];
 }

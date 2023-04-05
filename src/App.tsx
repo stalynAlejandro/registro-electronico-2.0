@@ -8,8 +8,6 @@ import { RouterProvider } from 'react-router-dom';
 import { MuiThemeProvider } from './themes/ThemeProvider';
 import { Suspense, createContext, useEffect } from 'react';
 
-export const ColorModeContext = createContext({ toggleColorMode: () => {} });
-
 export default function App() {
     const dispatch = useAppDispatch();
     const config = useFetchConfig();
