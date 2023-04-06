@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import { lightTheme, darkTheme, dimedTheme, darkDimedTheme } from './index';
+import { setTheme } from '../redux/theme';
+import { ThemeType } from '../vite-env';
+import { useSelector } from 'react-redux';
+import { RootState, useAppDispatch } from '../redux';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material';
+import { lightTheme, darkTheme, dimedTheme, darkDimedTheme } from './index';
 
 const getThemeByName = (theme: string) => {
     return themeMap[theme];
@@ -19,13 +23,20 @@ export const MuiThemeProvider = (props: {
     configTheme: any;
     children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
 }) => {
-    const [themeName, setThemeName] = useState('lightTheme');
+    const dispath = useAppDispatch();
+    const appTheme = useSelector((state: RootState) => state.theme.theme);
+    const [themeName, setThemeName] = useState(appTheme);
     const theme = props?.configTheme
         ? createTheme(props?.configTheme)
         : responsiveFontSizes(createTheme(getThemeByName(themeName)));
 
+    const setThemeToStore = (theme: ThemeType) => {
+        setThemeName(theme);
+        dispath(setTheme(theme));
+    };
+
     return (
-        <ThemeContext.Provider value={{ themeName, setThemeName }}>
+        <ThemeContext.Provider value={{ themeName, setThemeToStore }}>
             <ThemeProvider theme={theme}>{props?.children}</ThemeProvider>
         </ThemeContext.Provider>
     );

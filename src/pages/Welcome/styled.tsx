@@ -41,7 +41,7 @@ export const ButtonsThemesProps: ButtonProps[] = [
 
 export const ButtonsOptionsProps: ButtonProps[] = [
     {
-        name: 'all',
+        name: 'dev',
         label: 'All Options',
     },
     {
@@ -53,7 +53,11 @@ export const ButtonsOptionsProps: ButtonProps[] = [
         label: 'Single',
     },
     {
-        name: 'noauth',
+        name: 'typical',
+        label: 'Typical',
+    },
+    {
+        name: 'unverified',
         label: 'No Auth',
     },
 ];
@@ -65,7 +69,7 @@ export const ButtonStyled = styled(Button)(({ theme }) => ({
 }));
 
 export const ButtonContainer = styled('div')(({ theme }) => ({
-    width: '40rem',
+    width: '47rem',
     height: '5rem',
     display: 'flex',
     alignItems: 'center',
@@ -79,6 +83,10 @@ export const ButtonContainer = styled('div')(({ theme }) => ({
 
 export const ButtonContainerLang = styled(ButtonContainer)(({ theme }) => ({
     width: '30rem',
+}));
+
+export const ButtonContainerTheme = styled(ButtonContainer)(({ theme }) => ({
+    width: '40rem',
 }));
 
 export const WelcomeContainer = styled('div')(({ theme }) => ({

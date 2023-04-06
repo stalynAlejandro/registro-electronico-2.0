@@ -5,19 +5,20 @@ import { useTranslation } from 'react-i18next';
 import { Fade, Typography } from '@mui/material';
 import {
     ButtonProps,
-    ButtonsThemesProps,
-    ButtonsOptionsProps,
-    ButtonContainer,
-    ButtonContainerLang,
     ButtonStyled,
+    ButtonContainer,
     WelcomeContainer,
     ButtonsLangProps,
+    ButtonsThemesProps,
+    ButtonsOptionsProps,
+    ButtonContainerLang,
+    ButtonContainerTheme,
 } from './styled';
 
 export function Welcome() {
     let navigate = useNavigate();
     const { t, i18n } = useTranslation();
-    const { themeName, setThemeName } = useContext(ThemeContext);
+    const { themeName, setThemeToStore } = useContext(ThemeContext);
 
     const themeIsSelected = (th: string) => (th === themeName ? 'contained' : 'outlined');
     const languageIsSelected = (lg: string) => (lg === i18n.language ? 'contained' : 'outlined');
@@ -40,16 +41,16 @@ export function Welcome() {
                 </ButtonContainerLang>
 
                 <Typography variant={'h5'} children={t('findThemesHere')} />
-                <ButtonContainer>
+                <ButtonContainerTheme>
                     {ButtonsThemesProps.map((th: ButtonProps, index: number) => (
                         <ButtonStyled
                             key={index}
-                            onClick={() => setThemeName(th.name)}
+                            onClick={() => setThemeToStore(th.name)}
                             variant={themeIsSelected(th.name)}
                             children={t(th.label)}
                         />
                     ))}
-                </ButtonContainer>
+                </ButtonContainerTheme>
 
                 <Typography variant={'h5'} children={t('findDemosHere')} />
                 <ButtonContainer>

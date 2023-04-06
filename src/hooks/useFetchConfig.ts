@@ -1,12 +1,13 @@
-import { ConfigProps } from '../redux/config/types';
+import { IConfig } from '../vite-env';
 import { useState, useEffect } from 'react';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-export function useFetchConfig(): any | undefined {
+export function useFetchConfig(): (IConfig | boolean | undefined)[] {
     const [error, setError] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
-    const [config, setConfig] = useState<ConfigProps | undefined | boolean>(undefined);
+
+    const [config, setConfig] = useState<IConfig | undefined | boolean>(undefined);
 
     useEffect(() => {
         async function fetchConfig() {
@@ -31,5 +32,5 @@ export function useFetchConfig(): any | undefined {
         };
     }, []);
 
-    return config;
+    return [config, loading, error];
 }

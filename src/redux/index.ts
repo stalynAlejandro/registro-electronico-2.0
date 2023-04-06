@@ -6,9 +6,10 @@ import {
     ThunkDispatch,
 } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
+import { themeReducer } from './theme';
 import { configReducer } from './config';
 
-export const rootReducer = combineReducers({ config: configReducer });
+export const rootReducer = combineReducers({ config: configReducer, theme: themeReducer });
 export const store = configureStore({ reducer: rootReducer });
 
 const _getDispatch = () => store.dispatch;

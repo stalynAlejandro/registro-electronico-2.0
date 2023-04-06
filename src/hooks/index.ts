@@ -1,2 +1,3 @@
 import { useFetchConfig } from './useFetchConfig';
-export { useFetchConfig };
+import { useFetchProviders } from './useFetchProviders';
+export { useFetchConfig, useFetchProviders };

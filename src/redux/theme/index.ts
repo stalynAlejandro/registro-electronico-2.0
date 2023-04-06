@@ -1,9 +1,8 @@
+import { ThemeType } from '../../vite-env';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-type Theme = 'lightTheme' | 'darkTheme' | 'dimedTheme' | 'darkDimedTheme';
-
 interface ThemeProps {
-    theme: Theme;
+    theme: ThemeType;
 }
 
 const initialState: ThemeProps = {
@@ -14,7 +13,7 @@ const themeSlice = createSlice({
     name: 'theme',
     initialState,
     reducers: {
-        setTheme(state, action: PayloadAction<Theme>) {
+        setTheme(state, action: PayloadAction<ThemeType>) {
             state.theme = action.payload;
         },
     },

@@ -10,11 +10,16 @@ export function Auth() {
 
     const [providers, loading, error] = useFetchProviders('dev');
 
+    console.log({ providers });
+
     return (
         <Fade in={true} timeout={1000}>
             <AuthContainer maxWidth="xl">
                 <Typography variant={'h1'} children={t('verifyIdentity')} />
-                <Typography variant={'h1'} children={state} />
+                {state === 'all' && <Typography variant={'h2'} children={t('allProviders')} />}
+                {state === 'triple' && <Typography variant={'h2'} children={t('allProviders')} />}
+                {state === 'single' && <Typography variant={'h2'} children={t('allProviders')} />}
+                {state === 'noauth' && <Typography variant={'h2'} children={t('allProviders')} />}
             </AuthContainer>
         </Fade>
     );
