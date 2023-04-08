@@ -1,14 +1,8 @@
-import {
-    AnyAction,
-    CombinedState,
-    combineReducers,
-    configureStore,
-    ThunkDispatch,
-} from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { themeReducer } from './theme';
 import { configReducer } from './config';
 import { persistStore, persistReducer } from 'redux-persist';
+import { AnyAction, CombinedState, configureStore, ThunkDispatch } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
 import persistCombineReducers from 'redux-persist/es/persistCombineReducers';
 
