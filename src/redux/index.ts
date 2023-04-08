@@ -10,13 +10,17 @@ import { themeReducer } from './theme';
 import { configReducer } from './config';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import persistCombineReducers from 'redux-persist/es/persistCombineReducers';
 
 const persistConfig = {
     key: 'root',
     storage,
 };
 
-export const rootReducer = combineReducers({ config: configReducer, theme: themeReducer });
+export const rootReducer = persistCombineReducers(persistConfig, {
+    config: configReducer,
+    theme: themeReducer,
+});
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({

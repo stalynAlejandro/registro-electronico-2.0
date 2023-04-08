@@ -1,4 +1,4 @@
 module.exports = (req, res, next) => {
-    console.log('Middleware ...');
+    console.log('middleware ...');
     next();
 };

@@ -14,9 +14,9 @@ export interface IConfig {
 }
 
 export interface IProviders {
-    allowed: string[];
     id: string;
-    title: string;
-    description: string;
     loa: number;
+    title: string;
+    allowed: string[];
+    description: string;
 }
