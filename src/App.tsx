@@ -15,7 +15,7 @@ export default function App() {
 
     useEffect(() => {
         if (config) dispatch(setConfig(config));
-    }, [config]);
+    }, [config, dispatch, setConfig]);
 
     return (
         <MuiThemeProvider configTheme={config?.theme}>

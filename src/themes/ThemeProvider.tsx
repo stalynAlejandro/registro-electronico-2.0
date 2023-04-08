@@ -26,6 +26,7 @@ export const MuiThemeProvider = (props: {
     const dispath = useAppDispatch();
     const appTheme = useSelector((state: RootState) => state.theme.theme);
     const [themeName, setThemeName] = useState(appTheme);
+
     const theme = props?.configTheme
         ? createTheme(props?.configTheme)
         : responsiveFontSizes(createTheme(getThemeByName(themeName)));
