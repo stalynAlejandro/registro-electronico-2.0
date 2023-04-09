@@ -33,9 +33,24 @@ const meta: Meta<typeof AuthCard> = {
 
 export default meta;
 
-export const Primary: StoryObj<typeof AuthCard> = {
+export const Clave: StoryObj<typeof AuthCard> = {
     args: {
         title: 'Cl@ve',
+        info: 'Identificación a través de la plataforma Cl@ve del Gobierno de España.',
+    },
+    render: args => (
+        <Provider store={store}>
+            <MuiThemeProvider configTheme={undefined}>
+                <AuthCard {...args} />
+            </MuiThemeProvider>
+        </Provider>
+    ),
+};
+
+export const Certificado: StoryObj<typeof AuthCard> = {
+    args: {
+        title: 'Cerficado Digital',
+        info: 'Identificación mediante cerficado digital a través de su navegador web. ',
     },
     render: args => (
         <Provider store={store}>

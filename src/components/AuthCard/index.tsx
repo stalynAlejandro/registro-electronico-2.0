@@ -1,30 +1,32 @@
-import { styled } from '@mui/system';
-import { Button, Card, CardActions, CardContent } from '@mui/material';
+import MyIcon from './vite.svg';
+import {
+    CardTitle,
+    AuthButton,
+    InfoContainer,
+    CardContainer,
+    TitleContainer,
+    ActionsContainer,
+} from './styled';
 
 interface IAuthCard {
     title: string;
+    info: string;
 }
 
-const CardContainer = styled(Card)(({ theme }) => ({
-    width: '100%',
-    height: '100%',
-    maxWidth: 500,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
-
-const ActionsContainer = styled(CardActions)(({ theme }) => ({}));
-
-export const AuthCard = ({ title }: IAuthCard) => {
+export const AuthCard = ({ title, info }: IAuthCard) => {
     return (
         <CardContainer>
-            <CardContent>
-                <h1>{title}</h1>
-            </CardContent>
+            <TitleContainer>
+                <CardTitle children={`${title}`} />
+                <img src={MyIcon} alt="vite-logo" />
+            </TitleContainer>
+
+            <InfoContainer>
+                <p>{info}</p>
+            </InfoContainer>
+
             <ActionsContainer>
-                <Button size="small">Learn More</Button>
+                <AuthButton variant="contained" color="primary" children={`${title} ->`} />
             </ActionsContainer>
         </CardContainer>
     );
