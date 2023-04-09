@@ -20,7 +20,7 @@ export const themeMap: { [key: string]: any } = {
 export const ThemeContext = React.createContext(getThemeByName('lightTheme'));
 
 export const MuiThemeProvider = (props: {
-    configTheme: any;
+    configTheme: any | undefined;
     children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
 }) => {
     const dispath = useAppDispatch();

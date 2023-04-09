@@ -1,5 +1,8 @@
+import { store } from '../../redux';
+import { Provider } from 'react-redux';
 import { AuthCard } from '.';
 import { Meta, StoryObj } from '@storybook/react';
+import { MuiThemeProvider } from '../../themes/ThemeProvider';
 
 const meta: Meta<typeof AuthCard> = {
     title: 'Components/AuthCard',
@@ -35,8 +38,10 @@ export const Primary: StoryObj<typeof AuthCard> = {
         title: 'Primary',
     },
     render: args => (
-        <div>
-            <AuthCard {...args} />
-        </div>
+        <Provider store={store}>
+            <MuiThemeProvider configTheme={undefined}>
+                <AuthCard {...args} />
+            </MuiThemeProvider>
+        </Provider>
     ),
 };
