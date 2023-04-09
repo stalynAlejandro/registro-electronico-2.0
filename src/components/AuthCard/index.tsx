@@ -1,4 +1,5 @@
 import {
+    CardLogo,
     CardTitle,
     AuthButton,
     InfoContainer,
@@ -18,7 +19,7 @@ export const AuthCard = ({ title, info }: IAuthCard) => {
         <CardContainer>
             <TitleContainer>
                 <CardTitle children={`${title}`} />
-                <img src={MyIcon} alt="vite-logo" />
+                <CardLogo src={MyIcon} alt="vite-logo" />
             </TitleContainer>
 
             <InfoContainer>
