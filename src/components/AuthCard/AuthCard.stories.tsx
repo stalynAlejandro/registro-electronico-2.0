@@ -17,7 +17,7 @@ const meta: Meta<typeof AuthCard> = {
     },
     decorators: [
         Story => (
-            <div style={{ margin: '5em' }}>
+            <div>
                 <Story />
             </div>
         ),
@@ -35,7 +35,7 @@ export default meta;
 
 export const Primary: StoryObj<typeof AuthCard> = {
     args: {
-        title: 'Primary',
+        title: 'Cl@ve',
     },
     render: args => (
         <Provider store={store}>

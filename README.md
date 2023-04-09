@@ -1,11 +1,6 @@
 # Registro electronico 2.0
 
-
 ![Screenshot from 2023-04-09 11-50-00](https://user-images.githubusercontent.com/66746179/230766106-c291f689-9731-4b67-a737-2ec0ee38b511.png)
-
-
-
-
 
 ## Material UI - Fundamentals
 
