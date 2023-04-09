@@ -1,6 +1,5 @@
 import { router } from './routes';
 import { Loading } from './pages/Loading';
-import { IConfig } from './vite-env';
 import { persistor } from './redux';
 import { setConfig } from './redux/config';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -9,30 +8,25 @@ import { useFetchConfig } from './hooks';
 import { useAppDispatch } from './redux';
 import { RouterProvider } from 'react-router-dom';
 import { MuiThemeProvider } from './themes/ThemeProvider';
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect } from 'react';
 
 export default function App() {
     const dispatch = useAppDispatch();
-    const config = useFetchConfig()[0] as IConfig;
-    const [gateLifted, setGateLifted] = useState<boolean>(false);
-
-    const onBeforeLift = () => {
-        setTimeout(() => setGateLifted(true), 1800);
-    };
+    const [config, loading] = useFetchConfig();
 
     useEffect(() => {
         if (config) dispatch(setConfig(config));
-    }, [config, dispatch, setConfig]);
+    }, [config && loading]);
 
     return (
-        <PersistGate loading={<Loading />} persistor={persistor} onBeforeLift={onBeforeLift}>
+        <PersistGate persistor={persistor}>
             <MuiThemeProvider configTheme={config?.theme}>
                 <Suspense fallback={<Loading />}>
                     <CssBaseline />
-                    {gateLifted ? (
-                        <RouterProvider fallbackElement={<Loading />} router={router} />
-                    ) : (
+                    {loading ? (
                         <Loading />
+                    ) : (
+                        <RouterProvider fallbackElement={<Loading />} router={router} />
                     )}
                 </Suspense>
             </MuiThemeProvider>

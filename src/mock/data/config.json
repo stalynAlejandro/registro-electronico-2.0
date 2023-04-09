@@ -9,9 +9,13 @@
             "fontFamily": "Fira Code"
         },
         "palette": {
-            "mode": "dark",
+            "mode": "light",
+            "background": { "default": "#ffee", "paper": "#eeceee" },
             "primary": { "main": "#ff9000" },
             "secondary": { "main": "#ff0000" }
+        },
+        "status": {
+            "danger": "yellow"
         }
     }
 }

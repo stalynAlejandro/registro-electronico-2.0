@@ -1,4 +1,5 @@
-import { Button, styled } from '@mui/material';
+import { Button } from '@mui/material';
+import { CustomThemeOptions, styled } from '@mui/material/styles';
 
 export type ButtonProps = {
     name: string;
@@ -89,7 +90,7 @@ export const ButtonContainerTheme = styled(ButtonContainer)(({ theme }) => ({
     width: '40rem',
 }));
 
-export const WelcomeContainer = styled('div')(({ theme }) => ({
+export const WelcomeContainer = styled('div')(({ theme }: { theme: CustomThemeOptions }) => ({
     margin: 0,
     width: 'auto',
     height: '100vh',
@@ -98,4 +99,5 @@ export const WelcomeContainer = styled('div')(({ theme }) => ({
     alignItems: 'center',
     flexDirection: 'column',
     justifyContent: 'center',
+    backgroundColor: theme.palette?.background?.default,
 }));

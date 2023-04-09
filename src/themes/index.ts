@@ -1,4 +1,5 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { responsiveFontSizes } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 export const darkTheme = responsiveFontSizes(
     createTheme({
@@ -7,8 +8,12 @@ export const darkTheme = responsiveFontSizes(
         },
         palette: {
             mode: 'dark',
+
             primary: { main: '#ff62fe' },
             secondary: { main: '#fff300' },
+        },
+        status: {
+            danger: '#ff0000',
         },
     })
 );
@@ -23,6 +28,9 @@ export const lightTheme = responsiveFontSizes(
             primary: { main: '#ff62fe' },
             secondary: { main: '#fff300' },
         },
+        status: {
+            danger: '#ff0000',
+        },
     })
 );
 
@@ -36,6 +44,9 @@ export const dimedTheme = responsiveFontSizes(
             primary: { main: '#41f2f3' },
             secondary: { main: '#4ff300' },
         },
+        status: {
+            danger: '#ff0000',
+        },
     })
 );
 
@@ -48,6 +59,9 @@ export const darkDimedTheme = responsiveFontSizes(
             mode: 'dark',
             primary: { main: '#41f2f3' },
             secondary: { main: '#4ff300' },
+        },
+        status: {
+            danger: '#ff0000',
         },
     })
 );
