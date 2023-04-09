@@ -2,9 +2,9 @@ import { Container, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
 export const CardContainer = styled(Card)(({ theme }) => ({
-    width: 300,
-    height: 400,
-    // height: 'fit-content',
+    width: '100%',
+    height: 450,
+    maxWidth: 260,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
