@@ -12,9 +12,10 @@ import MyIcon from './vite.svg';
 interface IAuthCard {
     title: string;
     info: string;
+    infoUser: string;
 }
 
-export const AuthCard = ({ title, info }: IAuthCard) => {
+export const AuthCard = ({ title, info, infoUser }: IAuthCard) => {
     return (
         <CardContainer>
             <TitleContainer>
@@ -24,10 +25,11 @@ export const AuthCard = ({ title, info }: IAuthCard) => {
 
             <InfoContainer>
                 <p>{info}</p>
+                <p>{infoUser}</p>
             </InfoContainer>
 
             <ActionsContainer>
-                <AuthButton variant="contained" color="primary" children={`${title} ->`} />
+                <AuthButton variant="contained" children={`${title} ->`} />
             </ActionsContainer>
         </CardContainer>
     );

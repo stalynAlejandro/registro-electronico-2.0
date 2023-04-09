@@ -2,8 +2,9 @@ import { Container, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
 export const CardContainer = styled(Card)(({ theme }) => ({
-    width: 280,
-    height: 320,
+    width: 300,
+    height: 400,
+    // height: 'fit-content',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -26,17 +27,18 @@ export const CardTitle = styled('h1')(({ theme }) => ({
 }));
 
 export const CardLogo = styled('img')(({ theme }) => ({
-    height: 50,
-    width: 50,
+    height: 40,
+    width: 40,
     display: 'block',
     borderRadius: 15,
     alignSelf: 'center',
 }));
 
-export const InfoContainer = styled(Container)(({ theme }) => ({}));
+export const InfoContainer = styled(CardContent)(({ theme }) => ({}));
 
 export const ActionsContainer = styled(CardActions)(({ theme }) => ({}));
 
 export const AuthButton = styled(Button)(({ theme }) => ({
+    color: 'primary',
     borderRadius: 15,
 }));
