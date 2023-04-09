@@ -1,4 +1,3 @@
-import MyIcon from './vite.svg';
 import {
     CardTitle,
     AuthButton,
@@ -7,6 +6,7 @@ import {
     TitleContainer,
     ActionsContainer,
 } from './styled';
+import MyIcon from './vite.svg';
 
 interface IAuthCard {
     title: string;
