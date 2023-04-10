@@ -8,6 +8,7 @@ import {
     ActionsContainer,
 } from './styled';
 import MyIcon from './vite.svg';
+import { ArrowForward } from '@mui/icons-material';
 
 interface IAuthCard {
     title: string;
@@ -29,7 +30,11 @@ export const AuthCard = ({ title, info, infoUser }: IAuthCard) => {
             </InfoContainer>
 
             <ActionsContainer>
-                <AuthButton variant="contained" children={`${title} ->`} />
+                <AuthButton
+                    variant="contained"
+                    children={`${title}`}
+                    endIcon={<ArrowForward />}
+                />
             </ActionsContainer>
         </CardContainer>
     );

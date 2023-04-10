@@ -4,7 +4,7 @@ import { Button, Card, CardActions, CardContent } from '@mui/material';
 export const CardContainer = styled(Card)(({ theme }) => ({
     width: '100%',
     height: 450,
-    maxWidth: 260,
+    maxWidth: 280,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
