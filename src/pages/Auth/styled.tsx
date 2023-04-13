@@ -13,7 +13,7 @@ export const AuthContainer = styled(Container)(({ theme }) => ({
 }));
 
 export const CardContainer = styled('div')(
-    ({ theme, numCards }: { theme: any; numCards: number }) => ({
+    ({ theme, numCards }: { theme?: any; numCards: number }) => ({
         margin: 150,
         padding: 20,
         gridGap: 20,
