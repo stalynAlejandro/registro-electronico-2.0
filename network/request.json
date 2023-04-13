@@ -1,0 +1,188 @@
+{
+    "id": "6269000034830154399999",
+    "application": null,
+    "template": "TMPL_TASA",
+    "descriptionExt": null,
+    "description": null,
+    "variables": null,
+    "documentos": null,
+    "from": null,
+    "to": null,
+    "subject": null,
+    "ssubject": null,
+    "pattern": null,
+    "regorg": null,
+    "book": null,
+    "footer": null,
+    "header": null,
+    "destination": null,
+    "tipoSolicitud": null,
+    "name": "SOLGENERICA2",
+    "createConsent": null,
+    "identLevel": null,
+    "identTypes": "1001010000",
+    "dboidCenso": null,
+    "censoDesc": null,
+    "censoOrg": null,
+    "censoOrgDesc": null,
+    "regUO": null,
+    "regRole": null,
+    "typeAvQj": null,
+    "title": "Solicitud generica (NUEVO RELEC_2)",
+    "sections": {
+        "data": {
+            "elements": [
+                {
+                    "id": "6269600034830159999999",
+                    "fields": [
+                        {
+                            "id": "6268600027970663899999",
+                            "title": "Texto corto 10 pos",
+                            "description": null,
+                            "help": "Texto corto 10 pos",
+                            "required": false,
+                            "style": null,
+                            "regexp": null,
+                            "length": 10,
+                            "items": [],
+                            "name": "AIT_05",
+                            "type": "text",
+                            "default": null,
+                            "regex": null,
+                            "format": null
+                        },
+                        {
+                            "id": "6268600027971465199999",
+                            "title": "Texto largo",
+                            "description": null,
+                            "help": "Texto largo",
+                            "required": false,
+                            "style": null,
+                            "regexp": null,
+                            "length": 3000,
+                            "items": null,
+                            "name": "AIT_1000",
+                            "type": "textarea"
+                        }
+                    ],
+                    "title": "Nodo1",
+                    "type": "var",
+                    "name": null,
+                    "level": 0,
+                    "entity": null,
+                    "idControl": null,
+                    "parent": null
+                },
+                {
+                    "id": "6269600034830163999999",
+                    "fields": [
+                        {
+                            "id": "6268600029994772399999",
+                            "title": "Descripción de la actividad",
+                            "description": null,
+                            "help": "Descripción detallada de la actividad cuya celebración se solicita.",
+                            "required": false,
+                            "style": null,
+                            "regexp": null,
+                            "length": 3000,
+                            "items": null,
+                            "name": "DEMO_AUT_DESCRIPCION",
+                            "type": "textarea"
+                        },
+                        {
+                            "id": "6268600038855691599999",
+                            "title": "Variable de tasas",
+                            "description": null,
+                            "help": "Complete para saber el importe de la tasa",
+                            "required": true,
+                            "style": null,
+                            "regexp": null,
+                            "length": null,
+                            "items": null,
+                            "name": "AIT_TASA",
+                            "type": null
+                        }
+                    ],
+                    "title": "Nodo2",
+                    "type": "var",
+                    "name": null,
+                    "level": 0,
+                    "entity": null,
+                    "idControl": null,
+                    "parent": null
+                },
+                {
+                    "id": "6269600038855563899999",
+                    "fields": [
+                        {
+                            "id": "6268600027971433299999",
+                            "title": "Texto corto con número máximo de caracteres 256",
+                            "description": null,
+                            "help": "Texto corto con número máximo de caracteres 256",
+                            "required": true,
+                            "style": null,
+                            "regexp": null,
+                            "length": 256,
+                            "items": [],
+                            "name": "AIT_07",
+                            "type": "text",
+                            "default": null,
+                            "regex": null,
+                            "format": null
+                        }
+                    ],
+                    "title": "Node3",
+                    "type": "var",
+                    "name": null,
+                    "level": 0,
+                    "entity": null,
+                    "idControl": null,
+                    "parent": null
+                }
+            ]
+        },
+        "documents": {
+            "elements": [
+                {
+                    "id": "6259000034830153899999",
+                    "documents": [
+                        {
+                            "id": "6261100034830154099999",
+                            "title": "Documentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportarDocumentación a aportardsfasdfasdf",
+                            "description": "Documentación a aportar",
+                            "required": false,
+                            "reusable": false,
+                            "signature": true,
+                            "multiple": false,
+                            "accepts": [
+                                "bmp",
+                                "doc",
+                                "docx",
+                                "gif",
+                                "html",
+                                "jpeg",
+                                "jpg",
+                                "pdf",
+                                "png",
+                                "tif",
+                                "tiff",
+                                "xls",
+                                "xml",
+                                "xsd",
+                                "xsl",
+                                "zip"
+                            ],
+                            "maxsize": 10000,
+                            "mimeType": null
+                        }
+                    ],
+                    "title": "Documentación",
+                    "level": 0,
+                    "parent": null
+                }
+            ]
+        }
+    },
+    "apordocMode": null,
+    "apordocType": null
+}

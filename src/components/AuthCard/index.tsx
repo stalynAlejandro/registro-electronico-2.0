@@ -13,11 +13,12 @@ interface IAuthCard {
     title: string;
     info: string;
     infoUser: string;
+    type: string;
 }
 
-export const AuthCard = ({ title, info, infoUser }: IAuthCard) => {
+export const AuthCard = ({ title, type, info, infoUser }: IAuthCard) => {
     return (
-        <CardContainer>
+        <CardContainer type={type}>
             <TitleContainer>
                 <CardTitle children={`${title}`} />
                 <CardLogo src={'assets/vite.svg'} alt="vite-logo" />

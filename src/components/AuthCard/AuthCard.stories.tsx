@@ -35,10 +35,11 @@ export default meta;
 
 export const Clave: StoryObj<typeof AuthCard> = {
     args: {
-        title: 'Cl@ve',
+        title: 'clave',
         info: 'Identificación a través de la plataforma Cl@ve del Gobierno de España.',
         infoUser:
             'Permite la identifiación por cualquiera de los métodos soportados por la plataforma (algunos métodos requieren registro previo).',
+        type: 'clave',
     },
     render: args => (
         <Provider store={store}>
@@ -51,10 +52,45 @@ export const Clave: StoryObj<typeof AuthCard> = {
 
 export const Certificado: StoryObj<typeof AuthCard> = {
     args: {
-        title: 'Cerficado Digital',
+        title: 'digital-certificate',
         info: 'Identificación mediante cerficado digital a través de su navegador web. ',
         infoUser:
             'Deberá estar debidamente instalado en su navegador (en caso de certificados software) o disponer de los drivers necesarios (en caso de certificados hardware).',
+        type: 'digital-certificate',
+    },
+    render: args => (
+        <Provider store={store}>
+            <MuiThemeProvider configTheme={undefined}>
+                <AuthCard {...args} />
+            </MuiThemeProvider>
+        </Provider>
+    ),
+};
+
+export const Valid: StoryObj<typeof AuthCard> = {
+    args: {
+        title: 'valid',
+        info: 'Identificación mediante cerficado digital a través de su navegador web. ',
+        infoUser:
+            'Deberá estar debidamente instalado en su navegador (en caso de certificados software) o disponer de los drivers necesarios (en caso de certificados hardware).',
+        type: 'valid',
+    },
+    render: args => (
+        <Provider store={store}>
+            <MuiThemeProvider configTheme={undefined}>
+                <AuthCard {...args} />
+            </MuiThemeProvider>
+        </Provider>
+    ),
+};
+
+export const Unverified: StoryObj<typeof AuthCard> = {
+    args: {
+        title: 'unverified',
+        info: 'Identificación mediante cerficado digital a través de su navegador web. ',
+        infoUser:
+            'Deberá estar debidamente instalado en su navegador (en caso de certificados software) o disponer de los drivers necesarios (en caso de certificados hardware).',
+        type: 'unverified',
     },
     render: args => (
         <Provider store={store}>

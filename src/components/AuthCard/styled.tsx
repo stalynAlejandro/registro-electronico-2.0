@@ -1,16 +1,23 @@
 import { Container, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
-export const CardContainer = styled(Card)(({ theme }) => ({
-    width: '100%',
+export const CardContainer = styled(Card)(({ type }: { type: string }) => ({
+    width: 330,
     height: 450,
-    maxWidth: 280,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
     borderRadius: 15,
     padding: 15,
+    backgroundColor:
+        type === 'clave'
+            ? '#ffea00'
+            : type === 'digital-certificate'
+            ? '#f4f3f3'
+            : type === 'valid'
+            ? '#FFEBEE'
+            : '#efefef',
 }));
 
 export const TitleContainer = styled(Container)(({ theme }) => ({
