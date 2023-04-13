@@ -1,0 +1,670 @@
+{
+    "id": {
+        "issuer": "ES",
+        "number": "010000322",
+        "control": "Z"
+    },
+    "name": "BLANCOR*VIDAL,MANUELA",
+    "person": {
+        "dboid": "2000400035044312299999",
+        "name": "MANUELA",
+        "familyname": "BLANCOR",
+        "secondname": "VIDAL",
+        "cianame": null,
+        "fullname": "BLANCOR*VIDAL,MANUELA",
+        "idnumber": "010000322",
+        "ctrldigit": "Z",
+        "famnamepart": null,
+        "secnamepart": null,
+        "persontype": "F",
+        "addreses": null,
+        "contacts": [
+            {
+                "waycode": "21",
+                "wayvalue": "ramon.vila@gmail.com",
+                "lastModif": "24/11/2022 18:48:42",
+                "default": false,
+                "dboid": "2004100035044855899999",
+                "waytype": null,
+                "description": null
+            },
+            {
+                "waycode": "21",
+                "wayvalue": "dsdasdas@dsasd.es",
+                "lastModif": "20/12/2022 12:10:50",
+                "default": false,
+                "dboid": "2004100035044787899999",
+                "waytype": null,
+                "description": null
+            },
+            {
+                "waycode": "21",
+                "wayvalue": "la_de_Manuela@t-systems.com",
+                "lastModif": "16/03/2023 11:44:52",
+                "default": false,
+                "dboid": "2004100035314895599999",
+                "waytype": null,
+                "description": null
+            },
+            {
+                "waycode": "21",
+                "wayvalue": "ramon.vila@t-systems.com",
+                "lastModif": "12/04/2023 17:02:57",
+                "default": true,
+                "dboid": "2004100035044312399999",
+                "waytype": null,
+                "description": null
+            }
+        ],
+        "represented": [
+            {
+                "dboid": "2000400034851536199999",
+                "name": null,
+                "familyname": null,
+                "secondname": null,
+                "cianame": "FUFASA REV",
+                "fullname": "FUFASA REV",
+                "idnumber": "Q0100000",
+                "ctrldigit": "I",
+                "famnamepart": null,
+                "secnamepart": null,
+                "persontype": "J",
+                "addreses": null,
+                "contacts": [
+                    {
+                        "waycode": "21",
+                        "wayvalue": "22@22.es",
+                        "lastModif": "22/09/2022 17:04:57",
+                        "default": false,
+                        "dboid": "2004100034931552999999",
+                        "waytype": null,
+                        "description": null
+                    },
+                    {
+                        "waycode": "21",
+                        "wayvalue": "jua@ju.es",
+                        "lastModif": "05/10/2022 11:22:39",
+                        "default": false,
+                        "dboid": "2004100035011544699999",
+                        "waytype": null,
+                        "description": null
+                    },
+                    {
+                        "waycode": "21",
+                        "wayvalue": "ramon.vila@gmail.com",
+                        "lastModif": "05/10/2022 19:24:07",
+                        "default": false,
+                        "dboid": "2004100034935997499999",
+                        "waytype": null,
+                        "description": null
+                    },
+                    {
+                        "waycode": "21",
+                        "wayvalue": "dsdasdas@dsasd.es",
+                        "lastModif": "20/12/2022 13:33:06",
+                        "default": false,
+                        "dboid": "2004100035044787999999",
+                        "waytype": null,
+                        "description": null
+                    },
+                    {
+                        "waycode": "21",
+                        "wayvalue": "pruebas@t-systems.com",
+                        "lastModif": "03/02/2023 10:27:08",
+                        "default": false,
+                        "dboid": "2004100035314872299999",
+                        "waytype": null,
+                        "description": null
+                    },
+                    {
+                        "waycode": "21",
+                        "wayvalue": "ramon.vila@t-systems.com",
+                        "lastModif": "03/02/2023 10:48:26",
+                        "default": true,
+                        "dboid": "2004100035044312099999",
+                        "waytype": null,
+                        "description": null
+                    }
+                ],
+                "represented": [
+                    {
+                        "dboid": "2000400034393974499999",
+                        "name": "RAMON",
+                        "familyname": "VILA",
+                        "secondname": "SANTIAGO",
+                        "cianame": null,
+                        "fullname": "VILA*SANTIAGO,RAMON",
+                        "idnumber": "033964757",
+                        "ctrldigit": "J",
+                        "famnamepart": null,
+                        "secnamepart": null,
+                        "persontype": "F",
+                        "addreses": [
+                            {
+                                "dboid": "100900034400372399999",
+                                "acces": "100700025100040899999",
+                                "acronym": "CR",
+                                "stname": "ABADIAS",
+                                "num1": "1",
+                                "num2": null,
+                                "dupli1": "",
+                                "dupli2": null,
+                                "indkm": " ",
+                                "km": "0.0",
+                                "indblock": " ",
+                                "block": " ",
+                                "stair": null,
+                                "floor": null,
+                                "door": null,
+                                "toponymy": null,
+                                "zipcode": "43201",
+                                "fulladdress": "CR ABADIAS,    1",
+                                "orderbyadd": null,
+                                "munname": "CAMBRILS",
+                                "provname": "TARRAGONA",
+                                "cntryname": "ESPAÑA",
+                                "address": null,
+                                "ment1NAME": null,
+                                "ment2NAME": null,
+                                "muncplty": {
+                                    "dboid": "101700200000645500001",
+                                    "name": "CAMBRILS",
+                                    "code": "38",
+                                    "zipcode": "43123",
+                                    "stdcoded": true,
+                                    "goid": null,
+                                    "mapid": null,
+                                    "mslink": null,
+                                    "stcodfa": "S",
+                                    "lpcoded": 2,
+                                    "usefacpar": null,
+                                    "activerec": null,
+                                    "province": {
+                                        "dboid": "101901200000040900069",
+                                        "code": "43",
+                                        "name": "TARRAGONA",
+                                        "muncoded": true,
+                                        "activerec": null,
+                                        "country": {
+                                            "dboid": "102000000000002600001",
+                                            "code": "108",
+                                            "name": "ESPAÑA",
+                                            "provcoded": true,
+                                            "vatacronym": "ES",
+                                            "nationality": "ESPANYOLA",
+                                            "regcoded": true
+                                        }
+                                    }
+                                },
+                                "province": {
+                                    "dboid": "101901200000040900069",
+                                    "code": "43",
+                                    "name": "TARRAGONA",
+                                    "muncoded": true,
+                                    "activerec": null,
+                                    "country": {
+                                        "dboid": "102000000000002600001",
+                                        "code": "108",
+                                        "name": "ESPAÑA",
+                                        "provcoded": true,
+                                        "vatacronym": "ES",
+                                        "nationality": "ESPANYOLA",
+                                        "regcoded": true
+                                    }
+                                },
+                                "country": {
+                                    "dboid": "102000000000002600001",
+                                    "code": "108",
+                                    "name": "ESPAÑA",
+                                    "provcoded": true,
+                                    "vatacronym": "ES",
+                                    "nationality": "ESPANYOLA",
+                                    "regcoded": true
+                                },
+                                "cntrycode": "108",
+                                "provcode": "43",
+                                "muncode": "38"
+                            }
+                        ],
+                        "contacts": [
+                            {
+                                "waycode": "3",
+                                "wayvalue": "6526656656",
+                                "lastModif": "13/06/2022 09:35:14",
+                                "default": true,
+                                "dboid": "2004100034393976599999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "21",
+                                "wayvalue": "ramon.vilas@gmail.com",
+                                "lastModif": "29/06/2022 14:19:09",
+                                "default": false,
+                                "dboid": "2004100034393976699999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "21",
+                                "wayvalue": "ramon2.vila@gmail.com",
+                                "lastModif": "04/10/2022 16:15:13",
+                                "default": false,
+                                "dboid": "2004100034454392299999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "21",
+                                "wayvalue": "ramon.vila@gmail.com",
+                                "lastModif": "05/10/2022 19:24:07",
+                                "default": false,
+                                "dboid": "2004100035041638499999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "21",
+                                "wayvalue": "dsdasdas@dsasd.es",
+                                "lastModif": "06/10/2022 17:21:19",
+                                "default": false,
+                                "dboid": "2004100035044851799999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "21",
+                                "wayvalue": "ramon.vila@t-systems.com",
+                                "lastModif": "04/11/2022 09:43:32",
+                                "default": false,
+                                "dboid": "2004100035044312199999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "1",
+                                "wayvalue": "6526656656",
+                                "lastModif": "27/03/2023 12:12:37",
+                                "default": true,
+                                "dboid": "2004100038808734299999",
+                                "waytype": null,
+                                "description": null
+                            },
+                            {
+                                "waycode": "21",
+                                "wayvalue": "prueba@rvs.com",
+                                "lastModif": "28/03/2023 11:03:11",
+                                "default": true,
+                                "dboid": "2004100035167420799999",
+                                "waytype": null,
+                                "description": null
+                            }
+                        ],
+                        "represented": null,
+                        "onlyagent": false,
+                        "documents": [],
+                        "party": {
+                            "dboid": "100900034400372399999",
+                            "acces": "100700025100040899999",
+                            "acronym": "CR",
+                            "stname": "ABADIAS",
+                            "num1": "1",
+                            "num2": null,
+                            "dupli1": "",
+                            "dupli2": null,
+                            "indkm": " ",
+                            "km": "0.0",
+                            "indblock": " ",
+                            "block": " ",
+                            "stair": null,
+                            "floor": null,
+                            "door": null,
+                            "toponymy": null,
+                            "zipcode": "43201",
+                            "fulladdress": "CR ABADIAS,    1",
+                            "orderbyadd": null,
+                            "munname": "CAMBRILS",
+                            "provname": "TARRAGONA",
+                            "cntryname": "ESPAÑA",
+                            "address": null,
+                            "ment1NAME": null,
+                            "ment2NAME": null,
+                            "muncplty": {
+                                "dboid": "101700200000645500001",
+                                "name": "CAMBRILS",
+                                "code": "38",
+                                "zipcode": "43123",
+                                "stdcoded": true,
+                                "goid": null,
+                                "mapid": null,
+                                "mslink": null,
+                                "stcodfa": "S",
+                                "lpcoded": 2,
+                                "usefacpar": null,
+                                "activerec": null,
+                                "province": {
+                                    "dboid": "101901200000040900069",
+                                    "code": "43",
+                                    "name": "TARRAGONA",
+                                    "muncoded": true,
+                                    "activerec": null,
+                                    "country": {
+                                        "dboid": "102000000000002600001",
+                                        "code": "108",
+                                        "name": "ESPAÑA",
+                                        "provcoded": true,
+                                        "vatacronym": "ES",
+                                        "nationality": "ESPANYOLA",
+                                        "regcoded": true
+                                    }
+                                }
+                            },
+                            "province": {
+                                "dboid": "101901200000040900069",
+                                "code": "43",
+                                "name": "TARRAGONA",
+                                "muncoded": true,
+                                "activerec": null,
+                                "country": {
+                                    "dboid": "102000000000002600001",
+                                    "code": "108",
+                                    "name": "ESPAÑA",
+                                    "provcoded": true,
+                                    "vatacronym": "ES",
+                                    "nationality": "ESPANYOLA",
+                                    "regcoded": true
+                                }
+                            },
+                            "country": {
+                                "dboid": "102000000000002600001",
+                                "code": "108",
+                                "name": "ESPAÑA",
+                                "provcoded": true,
+                                "vatacronym": "ES",
+                                "nationality": "ESPANYOLA",
+                                "regcoded": true
+                            },
+                            "cntrycode": "108",
+                            "provcode": "43",
+                            "muncode": "38"
+                        },
+                        "representedBy": null,
+                        "consents": [
+                            {
+                                "dboid": "3217100035409871699999",
+                                "creationDate": "17/01/2023 13:10:51",
+                                "validityStartDate": "17/01/2023 00:00:00",
+                                "validityEndDate": null,
+                                "justification": "1",
+                                "purpose": "STA Notificaciones en Sede Electrónica",
+                                "status": "true",
+                                "subject": "3217200034463921199999",
+                                "cud": "14612063714053337443",
+                                "procName": "Pruebas Nuevo Relec/Pruebas NUEVO RELEC (JAVI)",
+                                "procDboid": "6461000034463921099999"
+                            },
+                            {
+                                "dboid": "3217100035289820999999",
+                                "creationDate": "12/12/2022 17:36:18",
+                                "validityStartDate": "12/12/2022 00:00:00",
+                                "validityEndDate": null,
+                                "justification": "1",
+                                "purpose": "STA Notificaciones en Sede Electrónica",
+                                "status": "true",
+                                "subject": "3217200034400428999999",
+                                "cud": "14155704040416053675",
+                                "procName": "Procedimiento de pruebas Rvs  2",
+                                "procDboid": "6461000034400428899999"
+                            },
+                            {
+                                "dboid": "3217100034454406299999",
+                                "creationDate": "29/06/2022 14:19:12",
+                                "validityStartDate": "29/06/2022 00:00:00",
+                                "validityEndDate": null,
+                                "justification": "1",
+                                "purpose": "STA Notificaciones en Sede Electrónica",
+                                "status": "true",
+                                "subject": "3217200000002020400000",
+                                "cud": "14155703547660241355",
+                                "procName": "CONS_UNICO",
+                                "procDboid": null
+                            }
+                        ],
+                        "clasificaciones": null,
+                        "sinonimos": "",
+                        "expedientes": null,
+                        "notificaciones": null,
+                        "notificationSystem": "PE"
+                    }
+                ],
+                "onlyagent": true,
+                "documents": [],
+                "party": null,
+                "representedBy": [],
+                "consents": [
+                    {
+                        "dboid": "3217100035256544399999",
+                        "creationDate": "01/12/2022 12:02:45",
+                        "validityStartDate": "01/12/2022 00:00:00",
+                        "validityEndDate": null,
+                        "justification": "1",
+                        "purpose": "STA Notificaciones en Sede Electrónica",
+                        "status": "true",
+                        "subject": "3217200000002020400000",
+                        "cud": "14155703723631617230",
+                        "procName": "CONS_UNICO",
+                        "procDboid": null
+                    },
+                    {
+                        "dboid": "3217100035256445199999",
+                        "creationDate": "01/12/2022 00:00:00",
+                        "validityStartDate": "01/11/2022 00:00:00",
+                        "validityEndDate": "29/11/2022 00:00:00",
+                        "justification": "0",
+                        "purpose": "STA Notificaciones en Sede Electrónica",
+                        "status": "false",
+                        "subject": "3217200000002020400000",
+                        "cud": "14155704350760157264",
+                        "procName": "CONS_UNICO",
+                        "procDboid": null
+                    },
+                    {
+                        "dboid": "3217100035256455399999",
+                        "creationDate": "01/12/2022 00:00:00",
+                        "validityStartDate": "01/10/2022 00:00:00",
+                        "validityEndDate": "01/11/2022 00:00:00",
+                        "justification": "0",
+                        "purpose": "STA Notificaciones en Sede Electrónica",
+                        "status": "false",
+                        "subject": "3217200000002020400000",
+                        "cud": "14155704353144404063",
+                        "procName": "CONS_UNICO",
+                        "procDboid": null
+                    },
+                    {
+                        "dboid": "3217100034938449099999",
+                        "creationDate": "22/09/2022 00:00:00",
+                        "validityStartDate": "01/09/2022 00:00:00",
+                        "validityEndDate": "01/11/2022 00:00:00",
+                        "justification": "0",
+                        "purpose": "STA Notificaciones en Sede Electrónica",
+                        "status": "false",
+                        "subject": "3217200000002020400000",
+                        "cud": "14155704314554637255",
+                        "procName": "CONS_UNICO",
+                        "procDboid": null
+                    },
+                    {
+                        "dboid": "3217100035256466999999",
+                        "creationDate": "01/12/2022 00:00:00",
+                        "validityStartDate": "01/01/2022 00:00:00",
+                        "validityEndDate": "01/02/2022 00:00:00",
+                        "justification": "0",
+                        "purpose": "STA Notificaciones en Sede Electrónica",
+                        "status": "true",
+                        "subject": "3217200000002020400000",
+                        "cud": "14155704426557345300",
+                        "procName": "CONS_UNICO",
+                        "procDboid": null
+                    }
+                ],
+                "clasificaciones": null,
+                "sinonimos": "",
+                "expedientes": null,
+                "notificaciones": null,
+                "notificationSystem": "E"
+            }
+        ],
+        "onlyagent": true,
+        "documents": [],
+        "party": null,
+        "representedBy": null,
+        "consents": [],
+        "clasificaciones": null,
+        "sinonimos": "",
+        "expedientes": null,
+        "notificaciones": null,
+        "notificationSystem": "PE"
+    },
+    "authentication": {
+        "date": "2023-04-13T12:39:54.578+02:00",
+        "provider": "sta",
+        "system": "certificate",
+        "loa": 4,
+        "id": "17046029313c3ef75d3f845457e0429dc31004f0",
+        "metadata": {
+            "assertion": {
+                "notBefore": "2023-04-13T12:39:54.621+02:00",
+                "notAfter": "2023-04-13T13:39:54.621+02:00"
+            },
+            "certificate": {
+                "serial": "142049882043252198590130254080087095623",
+                "issuer": {
+                    "id": null,
+                    "name": "C=ES, O=ACCV, OU=PKIACCV, CN=ACCVCA-120"
+                },
+                "validFrom": "2020-07-31T08:13:49.000+02:00",
+                "validUntil": "2023-07-31T08:13:49.000+02:00",
+                "classification": null,
+                "type": "X.509",
+                "usage": "digitalSignature | nonRepudiation | keyEncipherment"
+            }
+        },
+        "autofirma": null
+    },
+    "type": "physical",
+    "attributes": {
+        "name": {
+            "fullName": null,
+            "givenName": "MANUELA",
+            "surnames": null,
+            "firstFamilyName": null,
+            "secondFamilyName": null
+        },
+        "id": "10000322Z",
+        "email": null,
+        "phone": null,
+        "country": null,
+        "dateOfBirth": null,
+        "agentOf": null,
+        "authority": null
+    },
+    "signMethod": null,
+    "drafts": [
+        {
+            "data": [
+                {
+                    "id": "6269600034830163999999",
+                    "values": [
+                        {
+                            "value": "222",
+                            "field": {
+                                "id": "6268600038855691599999",
+                                "name": "AIT_TASA",
+                                "type": null
+                            }
+                        },
+                        {
+                            "value": "22",
+                            "field": {
+                                "id": "6268600029994772399999",
+                                "name": "DEMO_AUT_DESCRIPCION",
+                                "type": "textarea"
+                            }
+                        }
+                    ],
+                    "type": "var",
+                    "name": null
+                },
+                {
+                    "id": "6269600038855563899999",
+                    "values": [
+                        {
+                            "value": "22",
+                            "field": {
+                                "id": "6268600027971433299999",
+                                "name": "AIT_07",
+                                "type": "text"
+                            }
+                        }
+                    ],
+                    "type": "var",
+                    "name": null
+                }
+            ],
+            "documents": [],
+            "parties": {
+                "subject": {
+                    "id": "2000400034851536199999",
+                    "type": "J",
+                    "attributes": null,
+                    "value": {
+                        "vatacronym": null,
+                        "idnumber": "Q0100000",
+                        "ctrldigit": "I",
+                        "name": null,
+                        "familyname": null,
+                        "secondname": null,
+                        "cianame": "FUFASA REV",
+                        "personality": "J"
+                    },
+                    "displayId": "Q0100000I",
+                    "displayName": "FUFASA REV",
+                    "isAuthenticated": true
+                },
+                "representedBy": {
+                    "id": "2000400035044312299999",
+                    "type": "F",
+                    "attributes": null,
+                    "value": {
+                        "vatacronym": null,
+                        "idnumber": "010000322",
+                        "ctrldigit": "Z",
+                        "name": "MANUELA",
+                        "familyname": "BLANCOR",
+                        "secondname": "VIDAL",
+                        "cianame": null,
+                        "personality": "F"
+                    },
+                    "displayId": "10000322Z",
+                    "displayName": "MANUELA BLANCOR VIDAL",
+                    "isAuthenticated": true
+                },
+                "submittedBy": null,
+                "accreditation": null
+            },
+            "legal": null,
+            "notification": null,
+            "apordoc": {
+                "notifId": null,
+                "aditionalInfo": null,
+                "expId": null
+            },
+            "mode": "draft",
+            "dateTime": "2023-04-12T22:36:40.622Z",
+            "reference": "2e09ba47-6bc0-4a9a-8281-2e1d2aa0461a",
+            "progress": 60
+        }
+    ],
+    "reference": "a554a522-56eb-4d17-a655-90d561db36af"
+}

@@ -4,7 +4,7 @@ import { ThemeType } from '../vite-env';
 import { useSelector } from 'react-redux';
 import { RootState, useAppDispatch } from '../redux';
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material';
-import { lightTheme, darkTheme, dimedTheme, darkDimedTheme } from './index';
+import { lightTheme, darkTheme, dimedTheme, darkDimedTheme, baseTheme } from './index';
 
 const getThemeByName = (theme: string) => {
     return themeMap[theme];
@@ -28,7 +28,7 @@ export const MuiThemeProvider = (props: {
     const [themeName, setThemeName] = useState(appTheme);
 
     const theme = props?.configTheme
-        ? responsiveFontSizes(createTheme(props?.configTheme))
+        ? responsiveFontSizes(createTheme(baseTheme, props?.configTheme))
         : responsiveFontSizes(createTheme(getThemeByName(themeName)));
 
     const setThemeToStore = (theme: ThemeType) => {

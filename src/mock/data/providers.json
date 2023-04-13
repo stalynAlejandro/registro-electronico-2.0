@@ -54,5 +54,12 @@
         "title": "Trámite sin autenticar",
         "description": "Este trámite te permite opinar acerca del funcionamiento y la información del portal de transparencia, y proponer sugerencias en materia de transparencia, acceso a la información pública y buen gobierno",
         "loa": 3
+    },
+    {
+        "id": "saavdev",
+        "title": "Solicitud generica (NUEVO RELEC_2)",
+        "description": null,
+        "allowed": ["clave", "digital-certificate", "valid", "unverified"],
+        "loa": 3
     }
 ]

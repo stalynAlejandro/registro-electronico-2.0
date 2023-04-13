@@ -2,7 +2,7 @@ import { Container, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
 export const CardContainer = styled(Card)(({ type }: { type: string }) => ({
-    width: 330,
+    width: 350,
     height: 450,
     display: 'flex',
     flexDirection: 'column',

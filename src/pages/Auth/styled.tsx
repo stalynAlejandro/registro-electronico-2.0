@@ -3,7 +3,7 @@ import { Container } from '@mui/system';
 
 export const AuthContainer = styled(Container)(({ theme }) => ({
     width: '100%',
-    height: '100vh',
+    height: '100%',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
@@ -12,20 +12,22 @@ export const AuthContainer = styled(Container)(({ theme }) => ({
     textAlign: 'center',
 }));
 
-export const CardContainer = styled('div')(({ theme, numCards }: { numCards: number }) => ({
-    margin: 50,
-    padding: 20,
-    gridGap: 20,
-    display: 'grid',
-    justifyContent: 'center',
-    gridTemplateColumns: `repeat(${numCards}, 1fr)`,
-    [theme.breakpoints.down('lg')]: {
-        gridTemplateColumns: `repeat(${numCards - 1}, 1fr)`,
-    },
-    [theme.breakpoints.down('md')]: {
-        gridTemplateColumns: `repeat(${numCards - 2}, 1fr)`,
-    },
-    [theme.breakpoints.down('sm')]: {
-        gridTemplateColumns: `repeat(1, 1fr)`,
-    },
-}));
+export const CardContainer = styled('div')(
+    ({ theme, numCards }: { theme: any; numCards: number }) => ({
+        margin: 150,
+        padding: 20,
+        gridGap: 20,
+        display: 'grid',
+        justifyContent: 'center',
+        gridTemplateColumns: `repeat(${numCards > 4 ? 3 : numCards}, 1fr)`,
+        [theme.breakpoints.down('lg')]: {
+            gridTemplateColumns: `repeat(${numCards > 3 ? 3 : numCards}, 1fr)`,
+        },
+        [theme.breakpoints.down('md')]: {
+            gridTemplateColumns: `repeat(${numCards > 2 ? 2 : numCards}, 1fr)`,
+        },
+        [theme.breakpoints.down('sm')]: {
+            gridTemplateColumns: `repeat(1, 1fr)`,
+        },
+    })
+);
