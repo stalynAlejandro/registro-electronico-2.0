@@ -19,11 +19,19 @@ export function Auth() {
             ) : (
                 <Fade in={true} timeout={1000}>
                     <AuthContainer maxWidth="xl">
-                        <Typography variant={'h1'} children={t('verifyIdentity')} />
+                        <Typography variant={'h2'} children={t('verifyIdentity')} />
                         <CardContainer numCards={(providers?.allowed?.length || 1) as number}>
                             {providers?.allowed?.map(type => (
                                 <AuthCard title={type} info={type} infoUser={type} type={type} />
                             ))}
+                            {(!providers || providers?.allowed?.length === 0) && (
+                                <AuthCard
+                                    title={'clave'}
+                                    info={'clave'}
+                                    infoUser={'clave'}
+                                    type={'clave'}
+                                />
+                            )}
                         </CardContainer>
                     </AuthContainer>
                 </Fade>
