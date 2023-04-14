@@ -1,15 +1,15 @@
-import { styled } from '@mui/system';
 import { useState } from 'react';
 import { Button, Menu, MenuItem, Tooltip } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 
 export interface LngSelectorProps {
+    tooltip: string;
     currentLng: string;
     listLng: { label: string; value: string }[];
     changeLng: (lng: string) => void;
 }
 
-export const LngSelector = ({ currentLng, listLng, changeLng }: LngSelectorProps) => {
+export const LngSelector = ({ tooltip, currentLng, listLng, changeLng }: LngSelectorProps) => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
@@ -18,7 +18,7 @@ export const LngSelector = ({ currentLng, listLng, changeLng }: LngSelectorProps
 
     return (
         <>
-            <Tooltip title={'CambiarIdioma'}>
+            <Tooltip title={tooltip}>
                 <Button
                     disableElevation
                     onClick={handleClick}

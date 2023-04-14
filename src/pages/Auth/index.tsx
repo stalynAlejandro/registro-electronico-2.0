@@ -1,12 +1,12 @@
 import { Loading } from '../Loading';
+import { AuthCard } from '../../components/AuthCard';
 import { useLocation } from 'react-router-dom';
-import { AuthContainer, CardContainer, FooterContainer } from './styled';
+import { LngSelector } from '../../components/LngSelector';
 import { useTranslation } from 'react-i18next';
+import { ButtonsLangProps } from '../Welcome/styled';
 import { Fade, Typography } from '@mui/material';
 import { useFetchProviders } from '../../hooks/useFetchProviders';
-import { AuthCard } from '../../components/AuthCard';
-import { LngSelector } from '../../components/LngSelector';
-import { ButtonsLangProps } from '../Welcome/styled';
+import { AuthContainer, CardContainer, FooterContainer } from './styled';
 
 export function Auth() {
     const { state = '' } = useLocation();
@@ -39,6 +39,7 @@ export function Auth() {
                                 <b>Opina y participa en el portal de transparencia</b>
                             </p>
                             <LngSelector
+                                tooltip="Cambiar idioma"
                                 listLng={listLanguages}
                                 currentLng={i18n.language.toUpperCase()}
                                 changeLng={lng => i18n.changeLanguage(lng)}
