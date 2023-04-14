@@ -23,7 +23,6 @@ export const store = configureStore({
         getDefaultMiddleware({
             serializableCheck: {
                 ignoredPaths: ['items.dates'],
-                ignoredActions: ['your/action/type'],
                 ignoredActionPaths: ['register', 'rehydrate', 'persist/PERSIST'],
             },
         }),
