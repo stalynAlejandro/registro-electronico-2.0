@@ -3,20 +3,19 @@ import { Container } from '@mui/system';
 
 export const AuthContainer = styled(Container)(({ theme }) => ({
     width: '100%',
-    height: '100%',
+    height: '100vh',
     display: 'flex',
+    textAlign: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    marginTop: theme.spacing(10),
-    textAlign: 'center',
+    padding: 60,
 }));
 
 export const CardContainer = styled('div')(
     ({ theme, numCards }: { theme?: any; numCards: number }) => ({
-        margin: 150,
-        padding: 20,
         gridGap: 20,
+        padding: 100,
         display: 'grid',
         justifyContent: 'center',
         gridTemplateColumns: `repeat(${numCards > 4 ? 3 : numCards}, 1fr)`,
@@ -31,3 +30,16 @@ export const CardContainer = styled('div')(
         },
     })
 );
+
+export const FooterContainer = styled('div')(({ theme }) => ({
+    minHeight: 100,
+    width: '50%',
+    display: 'flex',
+    marginTop: 'auto',
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+        minHeight: 180,
+    },
+}));
