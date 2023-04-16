@@ -1,6 +1,10 @@
 # Registro electronico 2.0
 
-![Screenshot from 2023-04-09 11-50-00](https://user-images.githubusercontent.com/66746179/230766106-c291f689-9731-4b67-a737-2ec0ee38b511.png)
+![Screenshot from 2023-04-16 18-15-15](https://user-images.githubusercontent.com/66746179/232326002-52034336-28ff-40b6-9aa5-cf510d5bd533.png)
+
+
+![Screenshot from 2023-04-16 18-14-31](https://user-images.githubusercontent.com/66746179/232325967-c659b81e-f9c0-4037-ac4d-721c918a9e31.png)
+
 
 ![Screenshot from 2023-04-09 21-57-01](https://user-images.githubusercontent.com/66746179/230793877-da75803b-1569-4905-83f4-9289b6c07a7a.png)
 
