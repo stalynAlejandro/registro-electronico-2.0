@@ -4,6 +4,12 @@ import { AuthCard } from '.';
 import { Meta, StoryObj } from '@storybook/react';
 import { MuiThemeProvider } from '../../themes/ThemeProvider';
 
+import { ReactComponent as GobiernoDeEspañaSvg } from '../../pages/Auth/authLogos/Gobierno-de-España.svg';
+import { ReactComponent as identityCardSvg } from '../../pages/Auth/authLogos/identity-card.svg';
+import { ReactComponent as digitalCertificateSvg } from '../../pages/Auth/authLogos/digital-certificate.svg';
+import { ReactComponent as deviceTokenSvg } from '../../pages/Auth/authLogos/device-token.svg';
+import { ReactComponent as devicePasswordTokenSvg } from '../../pages/Auth/authLogos/device-password-token.svg';
+
 const meta: Meta<typeof AuthCard> = {
     title: 'Components/AuthCard',
     component: AuthCard,
@@ -22,75 +28,27 @@ const meta: Meta<typeof AuthCard> = {
             </div>
         ),
     ],
-    argTypes: {
-        title: {
-            control: {
-                type: 'text',
-            },
-        },
-    },
+    argTypes: {},
 };
 
 export default meta;
 
-export const Clave: StoryObj<typeof AuthCard> = {
-    args: {
-        title: 'clave',
-        info: 'Identificación a través de la plataforma Cl@ve del Gobierno de España.',
-        infoUser:
-            'Permite la identifiación por cualquiera de los métodos soportados por la plataforma (algunos métodos requieren registro previo).',
-        type: 'clave',
-    },
-    render: args => (
-        <Provider store={store}>
-            <MuiThemeProvider configTheme={undefined}>
-                <AuthCard {...args} />
-            </MuiThemeProvider>
-        </Provider>
-    ),
-};
-
 export const Certificado: StoryObj<typeof AuthCard> = {
     args: {
-        title: 'digital-certificate',
-        info: 'Identificación mediante cerficado digital a través de su navegador web. ',
-        infoUser:
-            'Deberá estar debidamente instalado en su navegador (en caso de certificados software) o disponer de los drivers necesarios (en caso de certificados hardware).',
-        type: 'digital-certificate',
-    },
-    render: args => (
-        <Provider store={store}>
-            <MuiThemeProvider configTheme={undefined}>
-                <AuthCard {...args} />
-            </MuiThemeProvider>
-        </Provider>
-    ),
-};
-
-export const Valid: StoryObj<typeof AuthCard> = {
-    args: {
-        title: 'valid',
-        info: 'Identificación mediante cerficado digital a través de su navegador web. ',
-        infoUser:
-            'Deberá estar debidamente instalado en su navegador (en caso de certificados software) o disponer de los drivers necesarios (en caso de certificados hardware).',
-        type: 'valid',
-    },
-    render: args => (
-        <Provider store={store}>
-            <MuiThemeProvider configTheme={undefined}>
-                <AuthCard {...args} />
-            </MuiThemeProvider>
-        </Provider>
-    ),
-};
-
-export const Unverified: StoryObj<typeof AuthCard> = {
-    args: {
-        title: 'unverified',
-        info: 'Identificación mediante cerficado digital a través de su navegador web. ',
-        infoUser:
-            'Deberá estar debidamente instalado en su navegador (en caso de certificados software) o disponer de los drivers necesarios (en caso de certificados hardware).',
-        type: 'unverified',
+        type: 'clave',
+        category: 'external',
+        title: 'Clave',
+        description: 'IdentificacionATravesPlataformaClave',
+        help: 'PermiteIdentificacionPorCualquieraMetodos',
+        methods: [
+            { label: 'DNIElectronico', icon: identityCardSvg },
+            { label: 'CertificadoDigital', icon: digitalCertificateSvg },
+            { label: 'ClavePIN', icon: deviceTokenSvg },
+            { label: 'ClavePermanente', icon: devicePasswordTokenSvg },
+        ],
+        path: 'CLAVE',
+        color: '#ffce00',
+        Logo: GobiernoDeEspañaSvg,
     },
     render: args => (
         <Provider store={store}>

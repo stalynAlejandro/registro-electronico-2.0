@@ -10,7 +10,7 @@ i18n.use(Backend)
         debug: false,
         defaultNS: 'common',
         fallbackLng: 'es',
-        ns: ['common'],
+        ns: ['common', 'auth'],
         interpolation: { escapeValue: false },
     });
 

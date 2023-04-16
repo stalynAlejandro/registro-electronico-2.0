@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { ButtonsLangProps } from '../Welcome/styled';
 import { Fade, Typography } from '@mui/material';
 import { useFetchProviders } from '../../hooks/useFetchProviders';
-import { AuthContainer, CardContainer, FooterContainer } from './styled';
+import { AuthContainer, AuthDefinitions, CardContainer, FooterContainer } from './styled';
 
 export function Auth() {
     const { state = '' } = useLocation();
-    const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation(['common', 'auth']);
 
     const [providers, loading, error] = useFetchProviders('saavdev');
 
@@ -28,9 +28,27 @@ export function Auth() {
                     <AuthContainer maxWidth="xl">
                         <Typography variant={'h2'} children={t('verifyIdentity')} />
                         <CardContainer numCards={(providers?.allowed?.length || 1) as number}>
-                            {providers?.allowed?.map(type => (
-                                <AuthCard title={type} info={type} infoUser={type} type={type} />
-                            ))}
+                            {providers?.allowed?.map(type => {
+                                const {
+                                    category,
+                                    title = '',
+                                    description = '',
+                                    help = '',
+                                    color,
+                                    logo,
+                                } = AuthDefinitions.find(item => item.type === type) || {};
+                                return (
+                                    <AuthCard
+                                        title={t(title, { ns: 'auth' }) || ''}
+                                        category={category}
+                                        description={t(description, { ns: 'auth' }) || ''}
+                                        help={t(help, { ns: 'auth' }) || ''}
+                                        methods={[]}
+                                        color={color}
+                                        Logo={logo}
+                                    />
+                                );
+                            })}
                         </CardContainer>
                         <FooterContainer>
                             <p>

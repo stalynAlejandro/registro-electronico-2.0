@@ -20,7 +20,13 @@ export function useFetchProviders(id: string): [IProviders | undefined, boolean,
                             id: '6269000034830154399999',
                             title: 'Solicitud generica (NUEVO RELEC_2)',
                             description: null,
-                            allowed: ['clave', 'digital-certificate', 'valid', 'unverified'],
+                            allowed: [
+                                'clave',
+                                'giltza',
+                                'digital-certificate',
+                                'valid',
+                                'unverified',
+                            ],
                             loa: 3,
                         };
                     });

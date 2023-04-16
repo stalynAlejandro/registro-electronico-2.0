@@ -1,5 +1,4 @@
 import {
-    CardLogo,
     CardTitle,
     AuthButton,
     InfoContainer,
@@ -10,23 +9,38 @@ import {
 import { ArrowForward } from '@mui/icons-material';
 
 interface IAuthCard {
-    title: string;
-    info: string;
-    infoUser: string;
-    type: string;
+    type?: string;
+    category?: string;
+    title?: string;
+    description?: string;
+    help?: string;
+    methods?: object[];
+    path?: string;
+    color?: string;
+    Logo?: any;
 }
 
-export const AuthCard = ({ title, type, info, infoUser }: IAuthCard) => {
+export const AuthCard = ({
+    type,
+    category,
+    title,
+    description,
+    help,
+    methods,
+    path,
+    color = 'primary',
+    Logo,
+}: IAuthCard) => {
     return (
-        <CardContainer type={type}>
+        <CardContainer color={color}>
             <TitleContainer>
                 <CardTitle children={`${title}`} />
-                <CardLogo src={'assets/vite.svg'} alt="vite-logo" />
+                <Logo height={120} width={120} />
             </TitleContainer>
 
             <InfoContainer>
-                <p>{info}</p>
-                <p>{infoUser}</p>
+                <span>{description}</span>
+                <span>{help}</span>
             </InfoContainer>
 
             <ActionsContainer>
