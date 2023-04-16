@@ -97,8 +97,9 @@ export const CardContainer = styled('div')(
         gridGap: 20,
         padding: 100,
         display: 'grid',
+        alignContent: 'center',
         justifyContent: 'center',
-        gridTemplateColumns: `repeat(${numCards > 4 ? 4 : numCards}, 1fr)`,
+        gridTemplateColumns: `repeat(${numCards > 3 ? 3 : numCards}, 1fr)`,
         [theme.breakpoints.down('xl')]: {
             gridTemplateColumns: `repeat(${numCards > 2 ? 2 : numCards}, 1fr)`,
         },
