@@ -53,9 +53,9 @@ export function Auth() {
                         </CardContainer>
                         <FooterContainer>
                             <p>
-                                Su identidad electrónica será utilizada para el siguiente trámite
-                                administrativo:
-                                <b>Opina y participa en el portal de transparencia</b>
+                                {t('identidadUtilizada', { ns: 'auth' })}
+                                <br />
+                                <b>{t('opinaParticipa', { ns: 'auth' })}</b>
                             </p>
                             <LngSelector
                                 tooltip="Cambiar idioma"
