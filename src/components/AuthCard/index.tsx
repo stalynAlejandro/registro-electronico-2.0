@@ -15,7 +15,7 @@ interface IAuthCard {
     title?: string;
     description?: string;
     help?: string;
-    methods?: object[];
+    methods?: any[];
     path?: string;
     color?: string;
     Logo?: any;
