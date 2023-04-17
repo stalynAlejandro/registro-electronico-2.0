@@ -5,6 +5,7 @@ import {
     CardContainer,
     TitleContainer,
     ActionsContainer,
+    MethodsContainer,
 } from './styled';
 import { ArrowForward } from '@mui/icons-material';
 
@@ -41,6 +42,13 @@ export const AuthCard = ({
             <InfoContainer>
                 <span>{description}</span>
                 <span>{help}</span>
+                {methods &&
+                    methods.map(({ label, Icon }) => (
+                        <MethodsContainer>
+                            <Icon width={30} height={30} />
+                            {label}
+                        </MethodsContainer>
+                    ))}
             </InfoContainer>
 
             <ActionsContainer>

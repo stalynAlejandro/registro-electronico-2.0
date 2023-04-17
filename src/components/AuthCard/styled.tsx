@@ -3,7 +3,7 @@ import { Button, Card, CardActions, CardContent } from '@mui/material';
 
 export const CardContainer = styled(Card)(({ color }: { color: string }) => ({
     width: 480,
-    height: 530,
+    height: 580,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -35,6 +35,16 @@ export const InfoContainer = styled(CardContent)(({ theme }) => ({
     textAlign: 'left',
     display: 'flex',
     flexDirection: 'column',
+}));
+
+export const MethodsContainer = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    margin: 10,
+    '& > svg': {
+        marginRight: 10,
+    },
 }));
 
 export const ActionsContainer = styled(CardActions)(({ theme }) => ({}));

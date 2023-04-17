@@ -34,6 +34,7 @@ export function Auth() {
                                     title = '',
                                     description = '',
                                     help = '',
+                                    methods = [],
                                     color,
                                     logo,
                                 } = AuthDefinitions.find(item => item.type === type) || {};
@@ -43,7 +44,7 @@ export function Auth() {
                                         category={category}
                                         description={t(description, { ns: 'auth' }) || ''}
                                         help={t(help, { ns: 'auth' }) || ''}
-                                        methods={[]}
+                                        methods={methods}
                                         color={color}
                                         Logo={logo}
                                     />
