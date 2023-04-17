@@ -52,7 +52,10 @@ export function Auth() {
                                         category={category}
                                         description={t(description, { ns: 'auth' }) || ''}
                                         help={t(help, { ns: 'auth' }) || ''}
-                                        methods={methods}
+                                        methods={methods?.map(({ label, Icon }) => ({
+                                            label: t(label, { ns: 'auth' }),
+                                            Icon,
+                                        }))}
                                         color={color}
                                         Logo={logo}
                                     />
