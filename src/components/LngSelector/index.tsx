@@ -42,8 +42,9 @@ export const LngSelector = ({ tooltip, currentLng, listLng, changeLng }: LngSele
                     horizontal: 'center',
                 }}
                 onClose={handleClose}>
-                {listLng?.map(({ label, value }) => (
+                {listLng?.map(({ label, value }, index) => (
                     <MenuItem
+                        key={index}
                         onClick={() => {
                             handleClose();
                             changeLng(value);

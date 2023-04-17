@@ -4,9 +4,15 @@ import { useLocation } from 'react-router-dom';
 import { LngSelector } from '../../components/LngSelector';
 import { useTranslation } from 'react-i18next';
 import { ButtonsLangProps } from '../Welcome/styled';
-import { Fade, Typography } from '@mui/material';
+import { Fade } from '@mui/material';
 import { useFetchProviders } from '../../hooks/useFetchProviders';
-import { AuthContainer, AuthDefinitions, CardContainer, FooterContainer } from './styled';
+import {
+    AuthContainer,
+    AuthDefinitions,
+    AuthTitle,
+    CardContainer,
+    FooterContainer,
+} from './styled';
 
 export function Auth() {
     const { state = '' } = useLocation();
@@ -26,9 +32,9 @@ export function Auth() {
             ) : (
                 <Fade in={true} timeout={1000}>
                     <AuthContainer maxWidth="xl">
-                        <Typography variant={'h2'} children={t('verifyIdentity')} />
+                        <AuthTitle children={t('verifyIdentity')} />
                         <CardContainer numCards={(providers?.allowed?.length || 1) as number}>
-                            {providers?.allowed?.map(type => {
+                            {providers?.allowed?.map((type, index) => {
                                 const {
                                     category,
                                     title = '',
@@ -40,6 +46,8 @@ export function Auth() {
                                 } = AuthDefinitions.find(item => item.type === type) || {};
                                 return (
                                     <AuthCard
+                                        key={index}
+                                        type={type}
                                         title={t(title, { ns: 'auth' }) || ''}
                                         category={category}
                                         description={t(description, { ns: 'auth' }) || ''}
@@ -52,11 +60,11 @@ export function Auth() {
                             })}
                         </CardContainer>
                         <FooterContainer>
-                            <p>
+                            <span>
                                 {t('identidadUtilizada', { ns: 'auth' })}
                                 <br />
-                                <b>{t('opinaParticipa', { ns: 'auth' })}</b>
-                            </p>
+                                <span>{t('opinaParticipa', { ns: 'auth' })}</span>
+                            </span>
                             <LngSelector
                                 tooltip="Cambiar idioma"
                                 listLng={listLanguages}

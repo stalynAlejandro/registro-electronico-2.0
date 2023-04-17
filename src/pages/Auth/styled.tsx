@@ -82,7 +82,7 @@ export const AuthDefinitions = [
 ];
 
 export const AuthContainer = styled(Container)(({ theme }) => ({
-    width: '100%',
+    width: '80%',
     height: '100vh',
     display: 'flex',
     textAlign: 'center',
@@ -90,12 +90,21 @@ export const AuthContainer = styled(Container)(({ theme }) => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     padding: 60,
+    [theme.breakpoints.down('md')]: {
+        padding: 0,
+    },
+}));
+
+export const AuthTitle = styled('h1')(({ theme }) => ({
+    width: '80%',
+    fontSize: 50,
 }));
 
 export const CardContainer = styled('div')(
     ({ theme, numCards }: { theme?: any; numCards: number }) => ({
         gridGap: 20,
-        padding: 100,
+        paddingTop: 50,
+        paddingBottom: 70,
         display: 'grid',
         alignContent: 'center',
         justifyContent: 'center',
@@ -107,6 +116,7 @@ export const CardContainer = styled('div')(
             gridTemplateColumns: `repeat(${numCards > 2 ? 1 : numCards}, 1fr)`,
         },
         [theme.breakpoints.down('sm')]: {
+            padding: 0,
             gridTemplateColumns: `repeat(1, 1fr)`,
         },
     })

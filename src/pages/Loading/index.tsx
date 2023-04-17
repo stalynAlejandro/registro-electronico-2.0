@@ -9,19 +9,34 @@ const SplashContainer = styled('div')(({ theme }) => ({
     height: '100%',
 }));
 
-const LinerProgressStyled = styled('img')(({ theme }) => ({
+const LinerProgressImg = styled('img')(({ theme }) => ({
     position: 'absolute',
-    top: '50%',
+    top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 150,
     height: 150,
 }));
 
+const LinerProgressStyled = styled(LinearProgress)(({ theme }) => ({
+    position: 'absolute',
+    top: '55%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    height: 10,
+    width: '12%',
+    borderRadius: 10,
+    backgroundColor: '#FFF',
+    '& .MuiLinearProgress-barColorPrimary': {
+        backgroundColor: '#626363',
+    },
+}));
+
 export function Loading() {
     return (
         <SplashContainer>
-            <LinerProgressStyled src="assets/neutral-mark.svg" />
+            <LinerProgressImg src="assets/neutral-mark.svg" />
+            <LinerProgressStyled />
         </SplashContainer>
     );
 }

@@ -22,7 +22,7 @@ interface IAuthCard {
 }
 
 export const AuthCard = ({
-    type,
+    type = '',
     category,
     title,
     description,
@@ -33,7 +33,7 @@ export const AuthCard = ({
     Logo,
 }: IAuthCard) => {
     return (
-        <CardContainer color={color}>
+        <CardContainer type={type}>
             <TitleContainer>
                 <CardTitle children={`${title}`} />
                 <Logo height={120} width={120} />
@@ -43,8 +43,8 @@ export const AuthCard = ({
                 <span>{description}</span>
                 <span>{help}</span>
                 {methods &&
-                    methods.map(({ label, Icon }) => (
-                        <MethodsContainer>
+                    methods.map(({ label, Icon }, index) => (
+                        <MethodsContainer key={index}>
                             <Icon width={30} height={30} />
                             {label}
                         </MethodsContainer>
@@ -52,7 +52,12 @@ export const AuthCard = ({
             </InfoContainer>
 
             <ActionsContainer>
-                <AuthButton variant="contained" children={`${title}`} endIcon={<ArrowForward />} />
+                <AuthButton
+                    customcolor={color}
+                    variant="contained"
+                    children={`${title}`}
+                    endIcon={<ArrowForward />}
+                />
             </ActionsContainer>
         </CardContainer>
     );

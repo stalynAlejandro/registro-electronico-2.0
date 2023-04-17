@@ -1,7 +1,7 @@
 import { Container, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
-export const CardContainer = styled(Card)(({ color }: { color: string }) => ({
+export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type: string }) => ({
     width: 480,
     height: 580,
     display: 'flex',
@@ -10,7 +10,17 @@ export const CardContainer = styled(Card)(({ color }: { color: string }) => ({
     justifyContent: 'space-between',
     padding: 15,
     borderRadius: 15,
-    backgroundColor: color,
+    backgroundColor:
+        type === 'clave'
+            ? 'rgba(255, 204, 0, 0.784)'
+            : type === 'valid'
+            ? '#f97b65'
+            : type === 'giltza'
+            ? '#00537f'
+            : '#ededed',
+    [theme.breakpoints.down('sm')]: {
+        padding: 0,
+    },
 }));
 
 export const TitleContainer = styled(Container)(({ theme }) => ({
@@ -49,8 +59,8 @@ export const MethodsContainer = styled('div')(({ theme }) => ({
 
 export const ActionsContainer = styled(CardActions)(({ theme }) => ({}));
 
-export const AuthButton = styled(Button)(({ theme }) => ({
-    color: 'primary',
+export const AuthButton = styled(Button)(({ customcolor }: { customcolor: string }) => ({
+    backgroundColor: customcolor,
     width: 'fit-content',
     height: 'fit-content',
     borderRadius: 15,
