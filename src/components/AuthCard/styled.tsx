@@ -74,10 +74,13 @@ export const MethodsContainer = styled('div')(({ theme }) => ({
 
 export const ActionsContainer = styled(CardActions)(({ theme }) => ({}));
 
-export const AuthButton = styled(Button)(({ customcolor }: { customcolor: string }) => ({
-    backgroundColor: customcolor,
-    width: 'fit-content',
-    height: 'fit-content',
-    borderRadius: 15,
-    fontSize: 18,
-}));
+export const AuthButton = styled(Button)(
+    ({ theme, customcolor }: { theme?: any; customcolor: string }) => ({
+        backgroundColor: customcolor,
+        color: 'black',
+        width: 'fit-content',
+        height: 'fit-content',
+        borderRadius: 15,
+        fontSize: 18,
+    })
+);

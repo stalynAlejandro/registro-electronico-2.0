@@ -21,7 +21,7 @@ export const LngSelector = ({ tooltip, currentLng, listLng, changeLng }: LngSele
             <Tooltip title={tooltip}>
                 <Button
                     sx={{
-                        padding: 5,
+                        margin: 5,
                         color: 'black',
                         fontSize: 20,
                         '& svg': {

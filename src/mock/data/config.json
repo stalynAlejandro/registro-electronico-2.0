@@ -6,6 +6,7 @@
     "clientInfo": "regTao",
     "theme": {
         "palette": {
+            "mode": "light",
             "primary": {
                 "main": "#630099"
             },

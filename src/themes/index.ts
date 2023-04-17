@@ -1,9 +1,11 @@
-import { responsiveFontSizes } from '@mui/material/styles';
 import { createTheme } from '@mui/material/styles';
 
 export const baseTheme = createTheme({
     typography: {
         fontFamily: ['Fira Code', 'Roboto'].join(','),
+    },
+    palette: {
+        mode: 'light',
     },
 });
 
