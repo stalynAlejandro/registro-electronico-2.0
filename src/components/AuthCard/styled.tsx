@@ -1,7 +1,7 @@
-import { Container, styled } from '@mui/system';
+import { Container, Theme, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
-export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type: string }) => ({
+export const CardContainer = styled(Card)(({ theme, type }: { theme?: Theme; type: string }) => ({
     width: '100%',
     maxWidth: 450,
     minHeight: 500,
@@ -19,14 +19,14 @@ export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type:
             : type === 'giltza'
             ? 'rgba(0, 83, 127, 0.1)'
             : '#ededed',
-    [theme.breakpoints.down('sm')]: {
+    [theme!.breakpoints.down('sm')]: {
         minHeight: 0,
         width: '98%',
         height: 'fit-content',
     },
 }));
 
-export const TitleContainer = styled(Container)(({ theme }) => ({
+export const TitleContainer = styled(Container)(({ theme }: { theme?: Theme }) => ({
     display: 'flex',
     textAlign: 'left',
     alignItems: 'flex-start',
@@ -37,7 +37,7 @@ export const TitleContainer = styled(Container)(({ theme }) => ({
         padding: 0,
         margin: 0,
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme!.breakpoints.down('sm')]: {
         '& > svg': {
             width: 70,
             height: 70,
@@ -75,7 +75,7 @@ export const MethodsContainer = styled('div')(({ theme }) => ({
 export const ActionsContainer = styled(CardActions)(({ theme }) => ({}));
 
 export const AuthButton = styled(Button)(
-    ({ theme, customcolor }: { theme?: any; customcolor: string }) => ({
+    ({ theme, customcolor }: { theme?: Theme; customcolor: string }) => ({
         backgroundColor: customcolor,
         color: 'black',
         width: 'fit-content',
