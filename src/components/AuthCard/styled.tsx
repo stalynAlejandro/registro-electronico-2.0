@@ -19,7 +19,8 @@ export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type:
             ? '#00537f'
             : '#ededed',
     [theme.breakpoints.down('sm')]: {
-        padding: 0,
+        height: 'fit-content',
+        width: '100%',
     },
 }));
 

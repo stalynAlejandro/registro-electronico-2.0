@@ -123,7 +123,7 @@ export const CardContainer = styled('div')(
 );
 
 export const FooterContainer = styled('div')(({ theme }) => ({
-    minHeight: 100,
+    minHeight: 180,
     width: '50%',
     display: 'flex',
     marginTop: 'auto',
@@ -131,6 +131,8 @@ export const FooterContainer = styled('div')(({ theme }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
-        minHeight: 180,
+        width: '100%',
+        marginTop: 20,
+        marginBottom: 20,
     },
 }));
