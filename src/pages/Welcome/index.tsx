@@ -45,9 +45,9 @@ export function Welcome() {
                     {ButtonsThemesProps.map((th: ButtonProps, index: number) => (
                         <ButtonStyled
                             key={index}
-                            onClick={() => setThemeToStore(th.name)}
-                            variant={themeIsSelected(th.name)}
                             children={t(th.label)}
+                            variant={themeIsSelected(th.name)}
+                            onClick={() => setThemeToStore(th.name)}
                         />
                     ))}
                 </ButtonContainerTheme>

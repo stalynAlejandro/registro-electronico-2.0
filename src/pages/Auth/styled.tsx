@@ -2,13 +2,13 @@ import { styled } from '@mui/material';
 import { Container } from '@mui/system';
 
 import { ReactComponent as AOCSvg } from './authLogos/AOC.svg';
-import { ReactComponent as GobiernoDeEspañaSvg } from './authLogos/Gobierno-de-España.svg';
 import { ReactComponent as IzenpeSvg } from './authLogos/Izenpe.svg';
-import { ReactComponent as certificateSvg } from './authLogos/certificate.svg';
 import { ReactComponent as unknown2Svg } from './authLogos/unknown2.svg';
-import { ReactComponent as identityCardSvg } from './authLogos/identity-card.svg';
-import { ReactComponent as digitalCertificateSvg } from './authLogos/digital-certificate.svg';
 import { ReactComponent as deviceTokenSvg } from './authLogos/device-token.svg';
+import { ReactComponent as certificateSvg } from './authLogos/certificate.svg';
+import { ReactComponent as identityCardSvg } from './authLogos/identity-card.svg';
+import { ReactComponent as GobiernoDeEspañaSvg } from './authLogos/Gobierno-de-España.svg';
+import { ReactComponent as digitalCertificateSvg } from './authLogos/digital-certificate.svg';
 import { ReactComponent as devicePasswordTokenSvg } from './authLogos/device-password-token.svg';
 
 export const AuthDefinitions = [
