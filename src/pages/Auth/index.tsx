@@ -1,11 +1,11 @@
+import { Fade } from '@mui/material';
 import { Loading } from '../Loading';
 import { AuthCard } from '../../components/AuthCard';
-import { useLocation } from 'react-router-dom';
 import { LngSelector } from '../../components/LngSelector';
 import { useTranslation } from 'react-i18next';
 import { ButtonsLangProps } from '../Welcome/styled';
-import { Fade } from '@mui/material';
 import { useFetchProviders } from '../../hooks/useFetchProviders';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     AuthContainer,
     AuthDefinitions,
@@ -15,6 +15,7 @@ import {
 } from './styled';
 
 export function Auth() {
+    let navigate = useNavigate();
     const { state = '' } = useLocation();
     const { t, i18n } = useTranslation(['common', 'auth']);
 
@@ -45,6 +46,7 @@ export function Auth() {
                                     logo,
                                 } = AuthDefinitions.find(item => item.type === type) || {};
                                 return (
+                                    // <div className={`authCard-${type}`}>
                                     <AuthCard
                                         key={index}
                                         type={type}
@@ -58,7 +60,9 @@ export function Auth() {
                                         }))}
                                         color={color}
                                         Logo={logo}
+                                        onClick={() => navigate('/credentials', { state: type })}
                                     />
+                                    // </div>
                                 );
                             })}
                         </CardContainer>

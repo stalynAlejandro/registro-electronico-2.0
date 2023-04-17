@@ -19,6 +19,7 @@ interface IAuthCard {
     path?: string;
     color?: string;
     Logo?: any;
+    onClick?: () => void;
 }
 
 export const AuthCard = ({
@@ -31,6 +32,7 @@ export const AuthCard = ({
     path,
     color = 'primary',
     Logo,
+    onClick,
 }: IAuthCard) => {
     return (
         <CardContainer type={type}>
@@ -56,6 +58,7 @@ export const AuthCard = ({
                     customcolor={color}
                     variant="contained"
                     children={`${title}`}
+                    onClick={onClick}
                     endIcon={<ArrowForward />}
                 />
             </ActionsContainer>

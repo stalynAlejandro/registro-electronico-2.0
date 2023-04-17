@@ -2,6 +2,7 @@ import { Auth } from '../pages/Auth';
 import { About } from '../pages/About';
 import { Error } from '../pages/Error';
 import { Welcome } from '../pages/Welcome';
+import { Credentials } from '../pages/Credentials';
 import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
@@ -13,6 +14,11 @@ export const router = createBrowserRouter([
     {
         path: '/auth',
         element: <Auth />,
+        errorElement: <Error />,
+    },
+    {
+        path: '/credentials',
+        element: <Credentials />,
         errorElement: <Error />,
     },
     {
