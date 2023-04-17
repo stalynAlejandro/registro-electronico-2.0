@@ -36,7 +36,7 @@ export const AuthCard = ({
         <CardContainer type={type}>
             <TitleContainer>
                 <CardTitle children={`${title}`} />
-                <Logo height={120} width={120} />
+                <Logo />
             </TitleContainer>
 
             <InfoContainer>

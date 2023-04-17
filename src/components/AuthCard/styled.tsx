@@ -2,8 +2,9 @@ import { Container, styled } from '@mui/system';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 
 export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type: string }) => ({
-    width: 480,
-    height: 580,
+    width: '100%',
+    maxWidth: 500,
+    minHeight: 500,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -19,6 +20,7 @@ export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type:
             ? '#00537f'
             : '#ededed',
     [theme.breakpoints.down('sm')]: {
+        minHeight: 0,
         width: '98%',
         height: 'fit-content',
     },
@@ -26,9 +28,21 @@ export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type:
 
 export const TitleContainer = styled(Container)(({ theme }) => ({
     display: 'flex',
-    alignItems: 'center',
     textAlign: 'left',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
+    '& > svg': {
+        width: 120,
+        height: 120,
+        padding: 0,
+        margin: 0,
+    },
+    [theme.breakpoints.down('sm')]: {
+        '& > svg': {
+            width: 70,
+            height: 70,
+        },
+    },
 }));
 
 export const CardTitle = styled('h1')(({ theme }) => ({

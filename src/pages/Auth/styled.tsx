@@ -25,7 +25,7 @@ export const AuthDefinitions = [
             { label: 'ClavePermanente', Icon: devicePasswordTokenSvg },
         ],
         path: 'CLAVE',
-        color: '#ffee00',
+        color: '#fffb00',
         logo: GobiernoDeEspañaSvg,
     },
     {
