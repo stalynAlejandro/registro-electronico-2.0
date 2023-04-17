@@ -20,6 +20,14 @@ export const LngSelector = ({ tooltip, currentLng, listLng, changeLng }: LngSele
         <>
             <Tooltip title={tooltip}>
                 <Button
+                    sx={{
+                        padding: 5,
+                        color: 'black',
+                        fontSize: 20,
+                        '& svg': {
+                            mr: 1,
+                        },
+                    }}
                     disableElevation
                     onClick={handleClick}
                     children={

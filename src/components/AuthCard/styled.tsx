@@ -3,7 +3,7 @@ import { Button, Card, CardActions, CardContent } from '@mui/material';
 
 export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type: string }) => ({
     width: '100%',
-    maxWidth: 500,
+    maxWidth: 450,
     minHeight: 500,
     display: 'flex',
     flexDirection: 'column',
@@ -13,11 +13,11 @@ export const CardContainer = styled(Card)(({ theme, type }: { theme?: any; type:
     borderRadius: 15,
     backgroundColor:
         type === 'clave'
-            ? 'rgba(255, 204, 0, 0.784)'
+            ? 'rgba(255, 204, 0, 0.469)'
             : type === 'valid'
-            ? '#f97b65'
+            ? 'rgba(249, 123, 101, 0.1)'
             : type === 'giltza'
-            ? '#00537f'
+            ? 'rgba(0, 83, 127, 0.1)'
             : '#ededed',
     [theme.breakpoints.down('sm')]: {
         minHeight: 0,

@@ -31,7 +31,7 @@ export function Auth() {
                 <Loading />
             ) : (
                 <Fade in={true} timeout={1000}>
-                    <AuthContainer maxWidth="xl">
+                    <AuthContainer>
                         <AuthTitle children={t('verifyIdentity')} />
                         <CardContainer numCards={(providers?.allowed?.length || 1) as number}>
                             {providers?.allowed?.map((type, index) => {

@@ -22,8 +22,10 @@ export function useFetchProviders(id: string): [IProviders | undefined, boolean,
                             description: null,
                             allowed: [
                                 'clave',
+                                'valid',
                                 'digital-certificate',
-                                'unverified',
+                                // 'unverified',
+                                // 'giltza',
                             ],
                             loa: 3,
                         };

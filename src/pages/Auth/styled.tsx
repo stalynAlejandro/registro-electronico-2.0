@@ -25,7 +25,7 @@ export const AuthDefinitions = [
             { label: 'ClavePermanente', Icon: devicePasswordTokenSvg },
         ],
         path: 'CLAVE',
-        color: '#fffb00',
+        color: 'rgb(255, 206, 0)',
         logo: GobiernoDeEspañaSvg,
     },
     {
@@ -81,18 +81,15 @@ export const AuthDefinitions = [
     },
 ];
 
-export const AuthContainer = styled(Container)(({ theme }) => ({
-    width: '80%',
+export const AuthContainer = styled('div')(({ theme }) => ({
+    width: '100%',
     height: '100vh',
     display: 'flex',
+    flexDirection: 'column',
     textAlign: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
     justifyContent: 'flex-start',
     padding: 60,
-    [theme.breakpoints.down('md')]: {
-        padding: 0,
-    },
 }));
 
 export const AuthTitle = styled('h1')(({ theme }) => ({
@@ -116,7 +113,6 @@ export const CardContainer = styled('div')(
             gridTemplateColumns: `repeat(${numCards > 2 ? 1 : numCards}, 1fr)`,
         },
         [theme.breakpoints.down('sm')]: {
-            padding: 0,
             gridTemplateColumns: `repeat(1, 1fr)`,
         },
     })
