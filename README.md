@@ -3,7 +3,6 @@
 ![Screenshot from 2023-04-16 18-15-15](https://user-images.githubusercontent.com/66746179/232326002-52034336-28ff-40b6-9aa5-cf510d5bd533.png)
 
 
-![Screenshot from 2023-04-16 18-14-31](https://user-images.githubusercontent.com/66746179/232325967-c659b81e-f9c0-4037-ac4d-721c918a9e31.png)
 
 ![Screenshot from 2023-04-18 14-05-15](https://user-images.githubusercontent.com/66746179/232772046-176004fc-e9b8-4dc5-99ae-88efeedc2be0.png)
 
