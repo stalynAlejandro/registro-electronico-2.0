@@ -46,7 +46,6 @@ export function Auth() {
                                     logo,
                                 } = AuthDefinitions.find(item => item.type === type) || {};
                                 return (
-                                    // <div className={`authCard-${type}`}>
                                     <AuthCard
                                         key={index}
                                         type={type}
@@ -62,7 +61,6 @@ export function Auth() {
                                         Logo={logo}
                                         onClick={() => navigate('/credentials', { state: type })}
                                     />
-                                    // </div>
                                 );
                             })}
                         </CardContainer>
