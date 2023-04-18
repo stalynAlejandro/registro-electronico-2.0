@@ -160,3 +160,14 @@ export const FooterContainer = styled('div')(({ theme }) => ({
         marginBottom: 20,
     },
 }));
+
+export const FooterText = styled('p')(({ theme }) => ({
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontFamily: 'monospace',
+    '& a': {
+        color: theme.palette.text.secondary,
+        textDecoration: 'underline',
+    },
+}));

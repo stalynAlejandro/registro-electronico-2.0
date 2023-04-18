@@ -12,6 +12,7 @@ import {
     AuthTitle,
     CardContainer,
     FooterContainer,
+    FooterText,
 } from './styled';
 
 export function Auth() {
@@ -68,7 +69,7 @@ export function Auth() {
                             <span>
                                 {t('identidadUtilizada', { ns: 'auth' })}
                                 <br />
-                                <span>{t('opinaParticipa', { ns: 'auth' })}</span>
+                                <FooterText>{t('opinaParticipa', { ns: 'auth' })}</FooterText>
                             </span>
                             <LngSelector
                                 tooltip="Cambiar idioma"
