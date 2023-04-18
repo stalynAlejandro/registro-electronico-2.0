@@ -1,5 +1,4 @@
 import { styled } from '@mui/material';
-import { Container } from '@mui/system';
 
 import { ReactComponent as AOCSvg } from './authLogos/AOC.svg';
 import { ReactComponent as IzenpeSvg } from './authLogos/Izenpe.svg';
