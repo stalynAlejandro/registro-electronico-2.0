@@ -15,20 +15,7 @@ export function useFetchProviders(id: string): [IProviders | undefined, boolean,
                 const res = await fetch(`${API_URL}/requests/${id}/providers`)
                     .then(response => response.json())
                     .catch(e => {
-                        // throw Error(e);
-                        return {
-                            id: '6269000034830154399999',
-                            title: 'Solicitud generica (NUEVO RELEC_2)',
-                            description: null,
-                            allowed: [
-                                'clave',
-                                'valid',
-                                'digital-certificate',
-                                'unverified',
-                                'giltza',
-                            ],
-                            loa: 3,
-                        };
+                        throw Error(e);
                     });
                 setProviders(res);
                 setLoading(false);

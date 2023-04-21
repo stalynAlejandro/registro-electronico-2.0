@@ -17,6 +17,7 @@ import { ReactComponent as unknown2Svg } from '../../pages/Auth/authLogos/unknow
 const meta: Meta<typeof AuthCard> = {
     title: 'Components/AuthCard',
     component: AuthCard,
+    tags: ['autodocs'],
     parameters: {
         backgrounds: {
             values: [

@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "dev:mock": "concurrently --kill-others \"npm run mock:api\" \"npm run dev\"",
         "build": "tsc && vite build",
         "preview": "vite preview",
         "dev-https": "set HTTPS=true&&npm dev",
