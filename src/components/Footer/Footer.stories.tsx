@@ -1,12 +1,12 @@
 import { store } from '../../redux';
+import { Footer } from './index';
 import { Provider } from 'react-redux';
-import { LngSelector } from '.';
 import { Meta, StoryObj } from '@storybook/react';
 import { MuiThemeProvider } from '../../themes/ThemeProvider';
 
-const meta: Meta<typeof LngSelector> = {
-    title: 'Components/LngSelector',
-    component: LngSelector,
+const meta: Meta<typeof Footer> = {
+    title: 'Components/Footer',
+    component: Footer,
     tags: ['autodocs'],
     parameters: {
         backgrounds: {
@@ -28,19 +28,12 @@ const meta: Meta<typeof LngSelector> = {
 
 export default meta;
 
-export const Primary: StoryObj<typeof LngSelector> = {
-    args: {
-        currentLng: 'Español',
-        listLng: [
-            { label: 'Español', value: 'es' },
-            { label: 'English', value: 'en' },
-        ],
-        changeLng: () => console.log('Change language'),
-    },
+export const Default: StoryObj<typeof Footer> = {
+    args: {},
     render: args => (
         <Provider store={store}>
             <MuiThemeProvider configTheme={undefined}>
-                <LngSelector {...args} />
+                <Footer />
             </MuiThemeProvider>
         </Provider>
     ),
