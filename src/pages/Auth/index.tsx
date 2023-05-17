@@ -1,11 +1,11 @@
 import { Fade } from '@mui/material';
 import { Loading } from '../Loading';
 import { AuthCard } from '../../components/AuthCard';
+import { useNavigate } from 'react-router-dom';
 import { LngSelector } from '../../components/LngSelector';
 import { useTranslation } from 'react-i18next';
 import { ButtonsLangProps } from '../Welcome/styled';
 import { useFetchProviders } from '../../hooks/useFetchProviders';
-import { useLocation, useNavigate } from 'react-router-dom';
 import {
     AuthContainer,
     AuthDefinitions,
@@ -17,7 +17,6 @@ import {
 
 export function Auth() {
     let navigate = useNavigate();
-    const { state = '' } = useLocation();
     const { t, i18n } = useTranslation(['common', 'auth']);
 
     const [providers, loading, error] = useFetchProviders('saavdev');
