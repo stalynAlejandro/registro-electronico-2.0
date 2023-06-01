@@ -23,7 +23,8 @@ export function Credentials() {
     return (
         <Fade in timeout={1000}>
             <div>
-                <h2>Result: {isLoading ? 'Loading' : result}</h2>
+                <Header />
+                <h2 style={{ marginTop: 90 }}>Result: {isLoading ? 'Loading' : result}</h2>
                 <button onClick={fn}>Start</button>
                 <Footer />
             </div>
