@@ -103,36 +103,36 @@ export const CardContainer = styled('div')(
         paddingBottom: 70,
         display: 'grid',
         gridTemplateColumns: `repeat(${numCards >= 4 ? 4 : numCards}, 1fr)`,
-        '& > div:nth-child(1)': {
+        '& > div:nth-of-type(1)': {
             gridColumn: `${numCards > 4 ? '1 / 3' : 'auto'} `,
         },
-        '& > div:nth-child(2)': {
+        '& > div:nth-of-type(2)': {
             gridColumn: `${numCards > 4 ? '3 / 5' : 'auto'} `,
         },
-        '& > div:nth-child(3)': {
+        '& > div:nth-of-type(3)': {
             gridColumn: `${numCards > 4 ? '5 / 7' : 'auto'} `,
         },
-        '& > div:nth-child(4)': {
+        '& > div:nth-of-type(4)': {
             gridColumn: `${numCards > 4 ? '2 / 4' : 'auto'} `,
         },
-        '& > div:nth-child(5)': {
+        '& > div:nth-of-type(5)': {
             gridColumn: `${numCards > 4 ? '4 / 6' : 'auto'} `,
         },
         [theme.breakpoints.down('xl')]: {
             gridTemplateColumns: `repeat(${numCards >= 3 ? 2 : numCards}, 1fr)`,
-            '& > div:nth-child(1)': {
+            '& > div:nth-of-type(1)': {
                 gridColumn: 'auto',
             },
-            '& > div:nth-child(2)': {
+            '& > div:nth-of-type(2)': {
                 gridColumn: 'auto',
             },
-            '& > div:nth-child(3)': {
+            '& > div:nth-of-type(3)': {
                 gridColumn: 'auto',
             },
-            '& > div:nth-child(4)': {
+            '& > div:nth-of-type(4)': {
                 gridColumn: 'auto',
             },
-            '& > div:nth-child(5)': {
+            '& > div:nth-of-type(5)': {
                 gridColumn: 'auto',
             },
         },
