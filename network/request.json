@@ -1,5 +1,6 @@
 {
     "id": "saavdev",
+    "javascript": true,
     "application": null,
     "template": "TMPL_TASA",
     "descriptionExt": null,
