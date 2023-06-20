@@ -19,7 +19,6 @@ export function Welcome() {
     let navigate = useNavigate();
     const { t, i18n } = useTranslation();
     const { themeName, setThemeToStore } = useContext(ThemeContext);
-
     const themeIsSelected = (th: string) => (th === themeName ? 'contained' : 'outlined');
     const languageIsSelected = (lg: string) => (lg === i18n.language ? 'contained' : 'outlined');
     const handleClickNavigateToAuth = (op: string) => navigate('/auth', { state: op });
