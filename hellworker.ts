@@ -1,7 +1,17 @@
 import _ from 'lodash';
 
-const ctx: Worker = self as any;
+self.onmessage = function (event) {
+    var data = event.data;
+    var action = data.action;
 
-ctx.addEventListener('message', event => {
-    postMessage('Worker done !');
-});
+    switch (action) {
+        case 'init':
+            var res = 'init - result to the main';
+            postMessage(res);
+            break;
+        case 'onChange':
+            var res = 'onChange - result to the main';
+            postMessage(res);
+            break;
+    }
+};
