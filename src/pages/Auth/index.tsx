@@ -18,7 +18,6 @@ import {
 export function Auth() {
     let navigate = useNavigate();
     const { t, i18n } = useTranslation(['common', 'auth']);
-
     const [providers, loading, error] = useFetchProviders('saavdev');
 
     const listLanguages = ButtonsLangProps.map(({ label, name }) => ({

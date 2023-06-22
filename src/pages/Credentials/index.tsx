@@ -1,10 +1,41 @@
-import React, { useState } from 'react';
-import { Fade } from '@mui/material';
+import React, { useCallback, useEffect, useState } from 'react';
+
+const worker = new Worker('hellworker.ts');
+
+const WorkComponent = (props: { count: number; sendMessageToWorker: (arg0: number) => void }) => {
+    const { sendMessageToWorker, count } = props;
+
+    const handleSendMessageToWorker = () => {
+        sendMessageToWorker(count);
+    };
+
+    const handleResetWorker = () => {
+        sendMessageToWorker(1);
+    };
+
+    return (
+        <div>
+            <button onClick={handleSendMessageToWorker}>Click Worker</button>
+            <button onClick={handleResetWorker}>Reset</button>
+        </div>
+    );
+};
 
 export function Credentials() {
+    const [count, setCount] = useState(1);
+    const sendMessageToWorker = useCallback((data: number) => worker.postMessage(data), [worker]);
+
+    useEffect(() => {
+        worker.onmessage = (event: MessageEvent) => {
+            const { data } = event;
+            setCount(data);
+        };
+    }, [worker]);
+
     return (
-        <Fade in timeout={1000}>
-            <div>Hello</div>
-        </Fade>
+        <div>
+            <span>{count}</span>
+            <WorkComponent count={count} sendMessageToWorker={sendMessageToWorker} />
+        </div>
     );
 }

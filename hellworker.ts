@@ -1,17 +1,10 @@
 import _ from 'lodash';
 
-self.onmessage = function (event) {
-    var data = event.data;
-    var action = data.action;
+let num = 2;
 
-    switch (action) {
-        case 'init':
-            var res = 'init - result to the main';
-            postMessage(res);
-            break;
-        case 'onChange':
-            var res = 'onChange - result to the main';
-            postMessage(res);
-            break;
-    }
+self.onmessage = function (event) {
+    var { data } = event;
+    const count = num * data;
+
+    self.postMessage(count);
 };
