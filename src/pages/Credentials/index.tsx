@@ -22,7 +22,7 @@ const WorkComponent = (props: { count: number; sendMessageToWorker: (arg0: numbe
 };
 
 export function Credentials() {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(2);
     const sendMessageToWorker = useCallback((data: number) => worker.postMessage(data), [worker]);
 
     const onKillWorker = () => worker.terminate();
