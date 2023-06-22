@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-const worker = new Worker('hellworker.ts');
+let worker = new Worker('hellworker.ts');
 
 const WorkComponent = (props: { count: number; sendMessageToWorker: (arg0: number) => void }) => {
     const { sendMessageToWorker, count } = props;
@@ -25,6 +25,8 @@ export function Credentials() {
     const [count, setCount] = useState(1);
     const sendMessageToWorker = useCallback((data: number) => worker.postMessage(data), [worker]);
 
+    const onKillWorker = () => worker.terminate();
+
     useEffect(() => {
         worker.onmessage = (event: MessageEvent) => {
             const { data } = event;
@@ -36,6 +38,7 @@ export function Credentials() {
         <div>
             <span>{count}</span>
             <WorkComponent count={count} sendMessageToWorker={sendMessageToWorker} />
+            <button onClick={() => onKillWorker()}>Kill Worker</button>
         </div>
     );
 }
