@@ -14,7 +14,7 @@ export default function App() {
     const dispatch = useAppDispatch();
     const [config, loading] = useFetchConfig();
 
-    useEffect(() => {
+       useEffect(() => {
         if (config) dispatch(setConfig(config));
     }, [config && loading]);
 

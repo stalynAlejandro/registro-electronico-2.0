@@ -1,14 +1,14 @@
 import { styled } from '@mui/material';
 
-import { ReactComponent as AOCSvg } from './authLogos/AOC.svg';
-import { ReactComponent as IzenpeSvg } from './authLogos/Izenpe.svg';
-import { ReactComponent as unknown2Svg } from './authLogos/unknown2.svg';
-import { ReactComponent as deviceTokenSvg } from './authLogos/device-token.svg';
-import { ReactComponent as certificateSvg } from './authLogos/certificate.svg';
-import { ReactComponent as identityCardSvg } from './authLogos/identity-card.svg';
-import { ReactComponent as GobiernoDeEspañaSvg } from './authLogos/Gobierno-de-España.svg';
-import { ReactComponent as digitalCertificateSvg } from './authLogos/digital-certificate.svg';
-import { ReactComponent as devicePasswordTokenSvg } from './authLogos/device-password-token.svg';
+import  * as AOCSvg  from './authLogos/AOC.svg';
+import  * as IzenpeSvg  from './authLogos/Izenpe.svg';
+import  * as unknown2Svg  from './authLogos/unknown2.svg';
+import  * as deviceTokenSvg  from './authLogos/device-token.svg';
+import  * as certificateSvg from './authLogos/certificate.svg';
+import  * as identityCardSvg  from './authLogos/identity-card.svg';
+import  * as GobiernoDeEspañaSvg  from './authLogos/Gobierno-de-España.svg';
+import  * as digitalCertificateSvg  from './authLogos/digital-certificate.svg';
+import  * as devicePasswordTokenSvg from './authLogos/device-password-token.svg';
 
 export const AuthDefinitions = [
     {

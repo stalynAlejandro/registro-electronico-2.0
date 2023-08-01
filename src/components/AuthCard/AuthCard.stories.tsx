@@ -4,15 +4,15 @@ import { AuthCard } from '.';
 import { Meta, StoryObj } from '@storybook/react';
 import { MuiThemeProvider } from '../../themes/ThemeProvider';
 
-import { ReactComponent as certificateSvg } from '../../pages/Auth/authLogos/certificate.svg';
-import { ReactComponent as AOCSvg } from '../../pages/Auth/authLogos/AOC.svg';
-import { ReactComponent as GobiernoDeEspañaSvg } from '../../pages/Auth/authLogos/Gobierno-de-España.svg';
-import { ReactComponent as identityCardSvg } from '../../pages/Auth/authLogos/identity-card.svg';
-import { ReactComponent as digitalCertificateSvg } from '../../pages/Auth/authLogos/digital-certificate.svg';
-import { ReactComponent as deviceTokenSvg } from '../../pages/Auth/authLogos/device-token.svg';
-import { ReactComponent as devicePasswordTokenSvg } from '../../pages/Auth/authLogos/device-password-token.svg';
-import { ReactComponent as IzenpeSvg } from '../../pages/Auth/authLogos/Izenpe.svg';
-import { ReactComponent as unknown2Svg } from '../../pages/Auth/authLogos/unknown2.svg';
+import  * as certificateSvg  from '../../pages/Auth/authLogos/certificate.svg';
+import  * as AOCSvg  from '../../pages/Auth/authLogos/AOC.svg';
+import  * as GobiernoDeEspañaSvg  from '../../pages/Auth/authLogos/Gobierno-de-España.svg';
+import  * as identityCardSvg  from '../../pages/Auth/authLogos/identity-card.svg';
+import  * as digitalCertificateSvg  from '../../pages/Auth/authLogos/digital-certificate.svg';
+import  * as deviceTokenSvg  from '../../pages/Auth/authLogos/device-token.svg';
+import  * as devicePasswordTokenSvg  from '../../pages/Auth/authLogos/device-password-token.svg';
+import  * as IzenpeSvg  from '../../pages/Auth/authLogos/Izenpe.svg';
+import  * as unknown2Svg  from '../../pages/Auth/authLogos/unknown2.svg';
 
 const meta: Meta<typeof AuthCard> = {
     title: 'Components/AuthCard',

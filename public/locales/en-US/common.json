@@ -1,0 +1,17 @@
+{
+    "hello": "¡Hola Mundo!",
+    "title": "Bienvenido a react con react-i18next",
+    "findThemesHere": "Hola dev, encuentra algunos temas aquí: ",
+    "findDemosHere": "Encuentra algunos demos aquí: ",
+    "verifyIdentity": "Verifique su identidad",
+    "theme": {
+        "dark": "Tema Oscuro",
+        "light": "Tema Claro",
+        "config": "Tema Config",
+        "default": "Tema Defecto"
+    },
+    "description": {
+        "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+        "part2": "Switch language between english and german using buttons above."
+    }
+}
